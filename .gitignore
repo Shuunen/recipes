@@ -7,3 +7,4 @@ dist
 node_modules
 sample.*
 .nyc_output
+/public/index.html

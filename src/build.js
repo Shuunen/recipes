@@ -1,0 +1,10 @@
+const { Converter } = require('showdown')
+const showdownToc = require('showdown-toc')
+const { writeFileSync, readFileSync } = require('fs')
+const { spawn } = require('cross-spawn')
+const encoding = 'utf-8'
+const cat = spawn.sync('cat', ['src/recipes/**/*.md'], { encoding })
+const converter = new Converter({ ghCompatibleHeaderId: true, headerLevelStart: 2, extensions: [showdownToc()] })
+const content = converter.makeHtml('# Sommaire\n[toc]\n' + cat.output[1])
+const html = (readFileSync('src/page.html') + '').replace('{content}', content).replace('{nbLines}', 12)
+writeFileSync('public/index.html', html)

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr" id="top">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les recettes de Shuunen</title>
+</head>
+
+<body>
+  <header>
+    <h1>Les recettes de Shuunen</h1>
+  </header>
+
+  <main class="container p-4 mx-auto">{content}</main>
+
+  <a href="#top" id="back-top" class="transition-opacity duration-700 ease-in-out opacity-0">⇪</a>
+
+  <footer>
+    <p class="mb-2">
+      Fait avec ❤️,
+      {nbLines} lignes de <a href="//github.com/Shuunen/recipes" target="blank">JavaScript</a>,
+      <a href="//github.com/showdownjs/showdown" target="blank">ShowdownJs</a> &
+      <a href="//tailwindcss.com" target="blank">TailwindCss</a>
+    </p>
+    <p>
+      Ce projet open source est disponible sur <a href="//github.com/Shuunen/recipes" target="blank">Github</a> &
+      hébergé par <a href="//www.netlify.com/" target="blank">Netlify</a>
+    </p>
+  </footer>
+
+  <script>
+    const backTop = document.getElementById('back-top')
+    const onScroll = () => backTop.classList.toggle('opacity-100', window.scrollY > 0)
+    window.addEventListener("scroll", onScroll)
+  </script>
+
+</body>
+
+</html>
