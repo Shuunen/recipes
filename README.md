@@ -4,8 +4,11 @@
 
 [![Build Status](https://travis-ci.org/Shuunen/recipes.svg?branch=master)](https://travis-ci.org/Shuunen/recipes)
 [![David](https://img.shields.io/david/shuunen/recipes.svg)](https://david-dm.org/shuunen/recipes)
+[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/recettes-shuunen.netlify.app.svg?publish)](https://observatory.mozilla.org/analyze/recettes-shuunen.netlify.app)
 [![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/Shuunen/recipes.svg)](https://lgtm.com/projects/g/Shuunen/recipes)
 [![Scrutinizer Score](https://scrutinizer-ci.com/g/Shuunen/recipes/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Shuunen/recipes)
+[![Website](https://img.shields.io/website/https/recettes-shuunen.netlify.app.svg)](https://recettes-shuunen.netlify.app)
+[![BCH compliance](https://bettercodehub.com/edge/badge/Shuunen/folio?branch=master)](https://bettercodehub.com/)
 
 > Personal recipes
 
