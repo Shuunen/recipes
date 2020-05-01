@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  @apply w-full;
+}
+
+body {
+  @apply text-lg font-sans;
+}
+
+header {
+  background-image: url('background.svg');
+  @apply bg-blue-200 h-64 bg-cover bg-fixed text-center flex flex-col justify-center font-serif shadow-md mb-6;
+}
+
+h1 {
+  @apply bg-white bg-opacity-75 m-auto pl-6 pr-6 pt-2 pb-2 shadow-md text-4xl;
+  --bg-opacity: 0.85;
+}
+
+h2 {
+  @apply mt-16 pt-16 relative text-2xl font-bold mb-3;
+}
+
+h2::before {
+  content: "";
+  background-image: linear-gradient(to right, goldenrod, transparent 50%);
+  @apply left-0 top-0 absolute h-1 rounded-full w-7/12;
+}
+
+h3 {
+  @apply text-xl mb-2 mt-3 font-bold;
+}
+
+ol {
+  @apply list-decimal ml-5 mb-2;
+}
+
+ul {
+  @apply list-disc ml-5 mb-2;
+}
+
+a {
+  @apply text-blue-600 underline break-words;
+}
+
+footer {
+  @apply h-32 flex flex-col justify-center font-serif text-center bg-yellow-400 text-xl mt-12;
+}
+
+footer a {
+  @apply text-red-700;
+}
+
+#back-top {
+  @apply fixed right-0 bottom-0 text-6xl text-center w-16 no-underline mr-6 mb-4;
+}
+
+#sommaire {
+  @apply text-right text-3xl mt-4 mb-0 pt-4 pb-2 border-0 font-normal;
+}
+
+#sommaire, #sommaire+ol {
+  background-color: hsl(40, 100%, 95%);
+  @apply pr-8;
+}
+
+#sommaire+ol {
+  @apply list-none ml-0 mb-24 pb-8 relative text-right text-xl flex flex-row flex-wrap justify-end;
+}
+
+#sommaire+ol::after {
+  content: "";
+  background-image: url('divider.svg');
+  bottom: -7rem;
+  @apply absolute block w-full left-0 h-16 opacity-50 bg-no-repeat bg-center;
+}
+
+#sommaire+ol>li {
+  min-width: 250px;
+  max-width: 30%;
+  @apply text-right ml-6 flex justify-end;
+}
+
+#sommaire+ol>li>a {
+  @apply pt-3 pb-3;
+}
+
+@media only screen and (max-width: 400px) {
+  #sommaire+ol>li {
+    width: 100%;
+  }
+}
+
+#sommaire::before, #sommaire+ol+h2::before {
+  @apply hidden;
+}

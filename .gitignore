@@ -8,3 +8,4 @@ node_modules
 sample.*
 .nyc_output
 /public/index.html
+/public/styles.css

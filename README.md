@@ -16,5 +16,6 @@
 - [Netlify](https://www.netlify.com/) : always here offering free hosting for open source projects
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
 - [ShowdownJs](https://github.com/showdownjs/showdown) : great lib to turn Markdown into Html
+- [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
 - [Travis-ci.org](https://travis-ci.org) : for providing free continuous deployments
 - [Vecteezy](https://www.vecteezy.com/free-vector/macaroni) : funky macaroni pattern background

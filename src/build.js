@@ -8,3 +8,5 @@ const converter = new Converter({ ghCompatibleHeaderId: true, headerLevelStart: 
 const content = converter.makeHtml('# Sommaire\n[toc]\n' + cat.output[1])
 const html = (readFileSync('src/page.html') + '').replace('{content}', content).replace('{nbLines}', 12)
 writeFileSync('public/index.html', html)
+const styles = spawn.sync('npm', ['run', 'build:css'], { encoding })
+if (styles.status) console.error(styles.output[2])
