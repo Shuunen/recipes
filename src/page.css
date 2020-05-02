@@ -10,6 +10,7 @@ html, body {
 }
 
 body {
+  --yellow-light: hsl(40, 100%, 95%);
   @apply text-lg font-sans;
 }
 
@@ -49,16 +50,29 @@ a {
   @apply text-blue-600 underline break-words;
 }
 
+a:hover {
+  @apply text-blue-800;
+}
+
 footer {
-  @apply h-32 flex flex-col justify-center font-serif text-center bg-yellow-400 text-xl mt-12;
+  @apply flex flex-col justify-center font-serif text-center bg-yellow-400 text-xl mt-12 p-8;
 }
 
 footer a {
   @apply text-red-700;
 }
 
+footer small {
+  @apply text-gray-600 mt-4;
+}
+
 #back-top {
-  @apply fixed text-blue-600 right-0 bottom-0 text-6xl text-center w-16 no-underline mr-6 mb-4;
+  line-height: 2.7rem;
+  @apply fixed text-gray-600 rounded-full shadow-lg right-0 bottom-0 text-4xl text-center w-12 h-12 no-underline mr-6 mb-4;
+}
+
+#back-top:hover {
+  @apply text-blue-600 shadow;
 }
 
 #sommaire {
@@ -66,7 +80,7 @@ footer a {
 }
 
 #sommaire, #sommaire+ol {
-  background-color: hsl(40, 100%, 95%);
+  background-color: var(--yellow-light);
   @apply pr-8;
 }
 
