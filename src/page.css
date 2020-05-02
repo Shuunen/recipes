@@ -58,7 +58,7 @@ footer a {
 }
 
 #back-top {
-  @apply fixed right-0 bottom-0 text-6xl text-center w-16 no-underline mr-6 mb-4;
+  @apply fixed text-blue-600 right-0 bottom-0 text-6xl text-center w-16 no-underline mr-6 mb-4;
 }
 
 #sommaire {
