@@ -10,13 +10,13 @@ html, body {
 }
 
 body {
-  --yellow-light: hsl(40, 100%, 95%);
   @apply text-lg font-sans;
 }
 
 header {
   background-image: url('background.svg');
-  @apply bg-blue-200 h-64 bg-cover bg-fixed text-center flex flex-col justify-center font-serif shadow-md mb-6;
+  background-size: 30rem;
+  @apply bg-fixed text-center flex flex-col justify-center font-serif shadow-md mb-6 pt-32 pb-12 pl-4 pr-4;
 }
 
 h1 {
@@ -55,7 +55,7 @@ a:hover {
 }
 
 footer {
-  @apply flex flex-col justify-center font-serif text-center bg-yellow-400 text-xl mt-12 p-8;
+  @apply flex flex-col justify-center font-serif text-center bg-orange-200 text-xl mt-12 p-8;
 }
 
 footer a {
@@ -80,8 +80,7 @@ footer small {
 }
 
 #sommaire, #sommaire+ol {
-  background-color: var(--yellow-light);
-  @apply pr-8;
+  @apply pr-8 bg-orange-100;
 }
 
 #sommaire+ol {
