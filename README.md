@@ -12,6 +12,11 @@
 
 > Personal recipes
 
+## Todo
+
+- [ ] mettre en place un lint pour formaliser les recettes de manière uniforme
+- [ ] trier les recettes par ordre alpha ou par catégories
+
 ## Thanks
 
 - [Github](https://github.com) : this great, free and evolving platform
