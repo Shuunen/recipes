@@ -21,7 +21,7 @@
 
 - [Github](https://github.com) : this great, free and evolving platform
 - [Gordon Johnson](https://pixabay.com/users/GDJ-1086657) : elegant divider
-- [Netlify](https://www.netlify.com/) : always here offering free hosting for open source projects
+- [Netlify](https://netlify.com/) : always here offering free hosting for open source projects
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
 - [ShowdownJs](https://github.com/showdownjs/showdown) : great lib to turn Markdown into Html
 - [SvgOmg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
