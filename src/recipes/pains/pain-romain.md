@@ -1,5 +1,7 @@
 # Pain Romain 🍞
 
+![photo-pain-romain](https://i.imgur.com/cKDeb9Ol.jpg)
+
 ## Ingrédients
 
 - 10 g de sel
@@ -30,7 +32,7 @@ Attention :
 - ne pas ouvrir le four pendant les 20 premières minutes
 - la vapeur dans le four n'est pas toujours très visible mais bien présente et dangereuse
 - ouvrir la porte du four avec la tête bien au dessous pour un bronzage facial instantané
-- le mélange avec du beurre de baratte demi-sel provoque une forte addiction
+- manger ce pain avec du beurre de baratte demi-sel provoque une forte addiction
 
 Pour la conservation :
 
