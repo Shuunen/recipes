@@ -10,7 +10,7 @@
     "repo-check": "1.10.0",
     "showdown": "1.9.1",
     "showdown-toc": "1.0.1",
-    "tailwindcss": "1.8.4"
+    "tailwindcss": "1.8.5"
   },
   "files": [
     "src",
