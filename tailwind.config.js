@@ -2,11 +2,11 @@ module.exports = {
   purge: {
     mode: 'all',
     enabled: true,
-    content: ['./src/*.js', './public/*.html']
+    content: ['./src/*.js', './public/*.html'],
   },
   theme: {
     container: {
-      center: true
-    }
+      center: true,
+    },
   },
 }

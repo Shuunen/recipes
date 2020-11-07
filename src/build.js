@@ -3,7 +3,7 @@ const { Converter } = require('showdown')
 const showdownToc = require('showdown-toc')
 const converter = new Converter({ ghCompatibleHeaderId: true, headerLevelStart: 2, extensions: [showdownToc()] })
 const md = readFileSync('public/recipes.md')
-const today = (d => `${(d.getMonth() + 1 + '').padStart(2, '0')}/${(d.getDate() + '').padStart(2, '0')}/${d.getFullYear()}`)(new Date)
+const today = (d => `${(d.getMonth() + 1 + '').padStart(2, '0')}/${(d.getDate() + '').padStart(2, '0')}/${d.getFullYear()}`)(new Date())
 const content = converter.makeHtml('# Sommaire\n[toc]\n' + md)
 const template = readFileSync('src/page.html') + ''
 const html = template.replace('{content}', content).replace('{nbLines}', 10).replace('{updated}', today)

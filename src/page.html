@@ -32,9 +32,9 @@
   </footer>
 
   <script>
-    const backTop = document.getElementById('back-top')
+    const backTop = document.querySelector('#back-top')
     const onScroll = () => backTop.classList.toggle('opacity-100', window.scrollY > 0)
-    window.addEventListener("scroll", onScroll)
+    window.addEventListener('scroll', onScroll)
   </script>
 
 </body>
