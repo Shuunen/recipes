@@ -19,9 +19,12 @@
 
 ## Thanks
 
+- [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Github](https://github.com) : this great, free and evolving platform
 - [Gordon Johnson](https://pixabay.com/users/GDJ-1086657) : elegant divider
 - [Netlify](https://netlify.com/) : always here offering free hosting for open source projects
+- [Npm-run-all](https://github.com/mysticatea/npm-run-all) : to keep my npm scripts clean & readable
+- [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
 - [ShowdownJs](https://github.com/showdownjs/showdown) : great lib to turn Markdown into Html
 - [SvgOmg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
