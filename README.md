@@ -29,5 +29,5 @@
 - [ShowdownJs](https://github.com/showdownjs/showdown) : great lib to turn Markdown into Html
 - [SvgOmg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
-- [travis-ci.com](https://travis-ci.com) : for providing free continuous deployments
+- [Travis-ci.com](https://travis-ci.com) : for providing free continuous deployments
 - [Vecteezy](https://www.vecteezy.com/free-vector/macaroni) : funky macaroni pattern background (I made it repeatable)
