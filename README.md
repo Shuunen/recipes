@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/shuunen/recipes.svg?color=informational)](https://github.com/Shuunen/recipes/blob/master/LICENSE)
 
-[![Build Status](https://travis-ci.org/Shuunen/recipes.svg?branch=master)](https://travis-ci.org/Shuunen/recipes)
+[![Build Status](https://travis-ci.com/Shuunen/recipes.svg?branch=master)](https://travis-ci.com/Shuunen/recipes)
 [![David](https://img.shields.io/david/shuunen/recipes.svg)](https://david-dm.org/shuunen/recipes)
 [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/recettes-shuunen.netlify.app.svg?publish)](https://observatory.mozilla.org/analyze/recettes-shuunen.netlify.app)
 [![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/Shuunen/recipes.svg)](https://lgtm.com/projects/g/Shuunen/recipes)
@@ -29,5 +29,5 @@
 - [ShowdownJs](https://github.com/showdownjs/showdown) : great lib to turn Markdown into Html
 - [SvgOmg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
-- [Travis-ci.org](https://travis-ci.org) : for providing free continuous deployments
+- [travis-ci.com](https://travis-ci.com) : for providing free continuous deployments
 - [Vecteezy](https://www.vecteezy.com/free-vector/macaroni) : funky macaroni pattern background (I made it repeatable)
