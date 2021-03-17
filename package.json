@@ -18,7 +18,7 @@
     "repo-check": "1.15.1",
     "showdown": "1.9.1",
     "showdown-toc": "1.0.1",
-    "tailwindcss": "2.0.3"
+    "tailwindcss": "2.0.4"
   },
   "files": [
     "src",
