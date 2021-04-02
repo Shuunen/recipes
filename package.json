@@ -27,7 +27,7 @@
     "url": "https://github.com/Shuunen/recipes.git"
   },
   "scripts": {
-    "build": "node src/build",
+    "build": "node src/cli",
     "ci": "run-s build lint test",
     "dev": "run-p serve watch",
     "lint": "stack lint",
@@ -37,7 +37,7 @@
     "start": "npm run dev",
     "test": "echo no tests yet",
     "update": "npx npm-check-updates -u",
-    "watch": "node src/build --watch"
+    "watch": "node src/cli --watch"
   },
   "version": "1.0.0"
 }
