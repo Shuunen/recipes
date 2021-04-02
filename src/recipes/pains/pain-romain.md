@@ -9,18 +9,17 @@
 - 500g de farine
 - 1 sachet de levure
 - 300g d'eau tiède
+- graines ou autre ingrédient magique
 
 ## Recette
 
-1. Mettre le sucre et la levure dans un peu d'eau tiède, touiller et laisser 15 min
-2. Mélanger la farine, les 300g d'eau tiède et la levure
-3. Pétrir 10 min et laisser 10 min à température ambiante et couvert
-4. Optionnel : ajouter graines et eau tiède (20cl d'eau tiède pour 60g de graine), pétrir 5 min
-5. Laisser reposer 2 heures à température ambiante et couvert
-6. Pétrir 5 min et laisser 1 heure à température ambiante et couvert
-7. Préchauffer le four à 230° en mettant 1 cm d'eau dans le lèche frite
-8. Faire une boule, huiler et lacérer le dessus
-9. Une fois le four à température, placer la boule sur une plaque huilée pendant 30 min
+1. Allumer le four quelques minutes juste pour le tiédir
+2. Mélanger tout
+3. Pétrir en visant une pâte collante et élastique, laisser reposer 1h dans le four tiède
+4. Répéter 2 fois
+5. Mettre 1 cm d'eau dans le lèche frite et faire chauffer le four 15min à 230°
+6. Faire une boule, sortir la plaque chaude du four, déposer de la farine puis le pain
+7. Enfourner 30 min, ni plus ni moins
 
 ## Retour d'expérience
 
