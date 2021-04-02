@@ -39,5 +39,5 @@
     "update": "npx npm-check-updates -u",
     "watch": "node src/build --watch"
   },
-  "version": "0.2.0"
+  "version": "1.0.0"
 }
