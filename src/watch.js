@@ -1,14 +1,14 @@
-const chokidar = require('chokidar')
-const { buildHtml, buildCss } = require('./build')
+import { watch } from 'chokidar'
+import { buildCss, buildHtml } from './build.js'
 
-module.exports.watchSrc = target => {
+export function watchSources (target) {
   if (!target) throw new Error('cannot watch without target')
   console.log(`watching : ${target}`)
-  chokidar.watch(['src/*.html', target]).on('change', path => {
+  watch(['src/*.html', target]).on('change', path => {
     console.log(`${path} changed, rebuilding...`)
     buildHtml(target, path.includes('.html'))
   })
-  chokidar.watch('src/*.css').on('change', () => {
+  watch('src/*.css').on('change', () => {
     console.log('styles changed, copying...')
     buildCss()
   })

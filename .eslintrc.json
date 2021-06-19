@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "./node_modules/shuunen-stack/.eslintrc.json"
+  ]
+}
