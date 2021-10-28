@@ -8,7 +8,7 @@
     "npm-run-all": "*",
     "showdown": "1.9.1",
     "showdown-toc": "1.0.1",
-    "shuunen-stack": "0.13.0"
+    "shuunen-stack": "0.14.0"
   },
   "files": [
     "src",
