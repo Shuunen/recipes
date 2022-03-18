@@ -4,7 +4,7 @@
   "description": "Personal recipes collection (in french)",
   "devDependencies": {
     "chokidar": "*",
-    "globcat": "2.0.0",
+    "globcat": "2.0.1",
     "npm-run-all": "*",
     "showdown": "1.9.1",
     "showdown-toc": "1.0.1",
