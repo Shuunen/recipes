@@ -6,7 +6,7 @@
     "chokidar": "*",
     "globcat": "2.0.1",
     "npm-run-all": "*",
-    "showdown": "2.0.3",
+    "showdown": "2.1.0",
     "showdown-toc": "1.0.1",
     "shuunen-stack": "0.14.0"
   },
