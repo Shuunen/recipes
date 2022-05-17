@@ -1,12 +1,13 @@
 .cache
 .DS_Store
 .env
+.nyc_output
 *.log
 *.tgz
-dist
-node_modules
-sample.*
-.nyc_output
 /public/index.html
 /public/recipes.md
 /public/styles.css
+dist
+node_modules
+pnpm-lock.yaml
+sample.*
