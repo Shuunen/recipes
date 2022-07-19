@@ -33,6 +33,7 @@
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
 - [Showdown](https://github.com/showdownjs/showdown) : a Markdown to HTML converter written in Javascript
 - [ShowdownJs](https://github.com/showdownjs/showdown) : great lib to turn Markdown into Html
+- [Shuutils](https://github.com/Shuunen/shuutils) : collection of pure JS utils
 - [SvgOmg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [Vecteezy](https://www.vecteezy.com/free-vector/macaroni) : funky macaroni pattern background (I made it repeatable)
 - [Watchlist](https://github.com/lukeed/watchlist) : recursively watch a list of directories & run a command on any file system
