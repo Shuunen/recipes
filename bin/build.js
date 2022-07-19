@@ -1,14 +1,31 @@
-import { readFileSync } from 'fs'
+import { copyFile, readFileSync, writeFileSync } from 'fs'
+import globcat from 'globcat'
 import Showdown from 'showdown'
 import ShowdownToc from 'showdown-toc'
+
+const timerLabel = 'build exécuté en '
+console.time(timerLabel)
 
 const converter = new Showdown.Converter({ ghCompatibleHeaderId: true, headerLevelStart: 2, extensions: [ShowdownToc()] })
 const today = (d => `${(String(d.getMonth() + 1)).padStart(2, '0')}/${(String(d.getDate())).padStart(2, '0')}/${d.getFullYear()} à ${(String(d.getHours())).padStart(2, '0')}h${(String(d.getMinutes())).padStart(2, '0')}`)(new Date())
 let template = ''
 
-export function mdToHtml (md, updateTemplate = false) {
+const mdToHtml = (md, updateTemplate = false) => {
   if (updateTemplate) template = String(readFileSync('src/layout.html'))
   const content = converter.makeHtml('# Sommaire\n[toc]\n' + md)
   const html = template.replace('{content}', content).replace('{updated}', today)
   return html
 }
+
+const buildHtml = () => globcat('src/**/*.md', (error, md) => {
+  if (error) throw error
+  writeFileSync('public/index.html', mdToHtml(md, true))
+})
+
+const buildCss = () => copyFile('src/styles.css', 'public/styles.css', error => { if (error) throw error })
+
+buildHtml()
+
+buildCss()
+
+console.timeEnd(timerLabel)

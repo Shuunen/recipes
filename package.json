@@ -3,12 +3,18 @@
   "bugs": "https://github.com/Shuunen/recipes/issues",
   "description": "Personal recipes collection (in french)",
   "devDependencies": {
-    "chokidar": "*",
-    "globcat": "2.0.1",
-    "npm-run-all": "*",
-    "showdown": "2.1.0",
-    "showdown-toc": "1.0.1",
-    "shuunen-stack": "0.14.0"
+    "chokidar": "3",
+    "eslint": "8",
+    "eslint-plugin-html": "7",
+    "eslint-plugin-unicorn": "43",
+    "globcat": "2",
+    "npm-parallel": "2",
+    "repo-check": "1.24",
+    "servor": "4",
+    "showdown": "2",
+    "showdown-toc": "1",
+    "shuutils": "5",
+    "watchlist": "0"
   },
   "files": [
     "src",
@@ -28,17 +34,16 @@
     "url": "https://github.com/Shuunen/recipes.git"
   },
   "scripts": {
-    "build": "node src/cli",
-    "ci": "run-s build lint test",
-    "dev": "run-p serve watch",
-    "lint": "stack lint",
+    "build": "node bin/build && unique-mark public/index.html",
+    "build:watch": "watchlist src -eager -- npm run build",
+    "check": "repo-check",
+    "ci": "npm run build && npm run lint && npm run check",
+    "dev": "parallel serve build:watch",
+    "lint": "eslint --fix --ignore-path .gitignore --ext .js,.html .",
     "postversion": "git push && git push --tags",
     "preversion": "npm run ci",
-    "serve": "stack serve public",
-    "start": "npm run dev",
-    "test": "echo no tests yet",
-    "update": "stack update",
-    "watch": "node src/cli --watch"
+    "serve": "servor public --browse --reload",
+    "test": "echo no tests yet"
   },
   "type": "module",
   "version": "1.0.0"
