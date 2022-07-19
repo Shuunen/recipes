@@ -2,5 +2,10 @@
   "css.validate": false,
   "cSpell.words": [
     "globcat"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#4B1A47",
+    "titleBar.activeBackground": "#6A2464",
+    "titleBar.activeForeground": "#FDF9FC"
+  }
 }
