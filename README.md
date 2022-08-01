@@ -28,6 +28,7 @@
 - [Github](https://github.com) : this great, free and evolving platform
 - [Gordon Johnson](https://pixabay.com/users/GDJ-1086657) : elegant divider
 - [Netlify](https://netlify.com/) : always here offering free hosting for open source projects
+- [Npm-parallel](https://github.com/spion/npm-parallel) : to keep my npm scripts clean & readable
 - [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Servor](https://github.com/lukejacksonn/servor) : dependency free dev server for single page app development
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
