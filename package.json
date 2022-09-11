@@ -9,11 +9,11 @@
     "eslint-plugin-unicorn": "43",
     "globcat": "2",
     "npm-parallel": "2",
-    "repo-check": "1.24",
+    "repo-check": "1.25",
     "servor": "4",
     "showdown": "2",
     "showdown-toc": "1",
-    "shuutils": "5",
+    "shuutils": "6",
     "watchlist": "0"
   },
   "files": [
