@@ -9,7 +9,7 @@
     "eslint-plugin-unicorn": "46",
     "globcat": "2",
     "npm-parallel": "2",
-    "repo-check": "1.30",
+    "repo-check": "1.31",
     "servor": "4",
     "showdown": "1.9",
     "showdown-toc": "1",
