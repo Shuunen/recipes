@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 import { copyFile, readFileSync, writeFileSync } from 'fs'
-import globcat from 'globcat'
+import { globcat } from 'globcat'
 import Showdown from 'showdown'
 import ShowdownToc from 'showdown-toc'
 
@@ -7,7 +8,7 @@ const timerLabel = 'build exécuté en '
 console.time(timerLabel)
 
 const converter = new Showdown.Converter({ ghCompatibleHeaderId: true, headerLevelStart: 2, extensions: [ShowdownToc()] })
-const today = (d => `${(String(d.getMonth() + 1)).padStart(2, '0')}/${(String(d.getDate())).padStart(2, '0')}/${d.getFullYear()} à ${(String(d.getHours())).padStart(2, '0')}h${(String(d.getMinutes())).padStart(2, '0')}`)(new Date())
+const today = (date => `${(String(date.getMonth() + 1)).padStart(2, '0')}/${(String(date.getDate())).padStart(2, '0')}/${date.getFullYear()} à ${(String(date.getHours())).padStart(2, '0')}h${(String(date.getMinutes())).padStart(2, '0')}`)(new Date())
 let template = ''
 
 const mdToHtml = (md, updateTemplate = false) => {

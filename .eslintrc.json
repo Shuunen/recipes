@@ -6,7 +6,7 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:unicorn/recommended"
+    "plugin:unicorn/all"
   ],
   "plugins": [
     "html",
@@ -22,30 +22,53 @@
       "error",
       "multi"
     ],
+    "eslint-comments/no-use": "off",
+    "etc/no-const-enum": "off",
+    "etc/no-enum": "off",
+    "etc/prefer-interface": "off",
+    "ext/lines-between-object-properties": "off",
     "func-names": [
       "error",
       "always"
     ],
-    "import/no-unassigned-import": "off",
-    "indent": [
+    "id-length": [
       "error",
-      2
+      {
+        "exceptions": [
+          "t"
+        ],
+        "min": 2
+      }
     ],
+    "import/extensions": "off",
+    "import/newline-after-import": "off",
+    "import/order": "off",
+    "import/prefer-default-export": "off",
+    "indent": "off",
+    "line-comment-position": "off",
+    "lines-around-comment": "off",
     "lines-between-class-members": "off",
+    "logical-assignment-operators": "off",
+    "max-len": "off",
     "max-statements-per-line": "off",
-    "no-console": "off",
+    "no-console": "error",
+    "no-inline-comments": "off",
     "object-curly-spacing": [
       "error",
       "always"
     ],
     "padding-line-between-statements": "off",
+    "prettier/prettier": "off",
     "quote-props": [
       "error",
       "consistent-as-needed"
     ],
-    "quotes": [
+    "quotes": "off",
+    "require-atomic-updates": [
       "error",
-      "single"
+      {
+        "allowProperties": true
+      }
     ],
     "semi": [
       "error",
@@ -55,10 +78,12 @@
       "error",
       "always"
     ],
+    "total-functions/no-partial-division": "off",
     "unicorn/no-array-for-each": "off",
     "unicorn/no-process-exit": "off",
     "unicorn/prefer-module": "off",
     "unicorn/prefer-node-protocol": "off",
+    "unicorn/prefer-string-replace-all": "off",
     "unicorn/prefer-switch": "off",
     "unicorn/prevent-abbreviations": [
       "error",

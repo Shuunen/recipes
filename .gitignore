@@ -1,6 +1,7 @@
 .cache
 .DS_Store
 .env
+.eslintcache
 .nyc_output
 *.log
 *.tgz
@@ -9,5 +10,4 @@
 /public/styles.css
 dist
 node_modules
-pnpm-lock.yaml
 sample.*
