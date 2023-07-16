@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -18,7 +18,7 @@ devDependencies:
     specifier: '47'
     version: 47.0.0(eslint@8.41.0)
   globcat:
-    specifier: 3.0.1
+    specifier: '3'
     version: 3.0.1
   npm-parallel:
     specifier: '2'
