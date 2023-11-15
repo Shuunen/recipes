@@ -36,8 +36,8 @@ devDependencies:
     specifier: '1'
     version: 1.0.1(showdown@1.9.1)
   shuutils:
-    specifier: '7.3'
-    version: 7.3.0
+    specifier: '7.4'
+    version: 7.4.0
   watchlist:
     specifier: '0'
     version: 0.3.1
@@ -1311,8 +1311,8 @@ packages:
       uvu: 0.5.6
     dev: true
 
-  /shuutils@7.3.0:
-    resolution: {integrity: sha512-M1i5OiV4McnXMCNoN2Ao+MKR+C+UEV784QZtGQzX53WYKEUBbJ5yH43qln8VsXl75AM15xKnRHZrLNtMHv3u4A==}
+  /shuutils@7.4.0:
+    resolution: {integrity: sha512-XlNT7tPeVUgB4S2YNDJYLRXdcvN7r182b/TP46J2w17xzoA33rKH17296N6gaZJiYYS4/WLqfNZl/wghCh1LNw==}
     hasBin: true
     dependencies:
       tiny-glob: 0.2.9
