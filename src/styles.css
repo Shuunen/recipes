@@ -2,25 +2,31 @@
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
-  border-color: #e2e8f0;
 }
 
 html {
+  --accent: #c53030;
+  --dark: #1f1409;
+  --shade: #718096;
+  --light: #fffafa;
+  --primary: 242, 191, 48; /* #f2bf30 rgb(242, 191, 48); */
   -webkit-text-size-adjust: 100%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: var(--light);
+  color: var(--dark);
+  font-family: sans-serif;
+  font-size: 1.2rem;
   line-height: 1.5;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   margin: 0;
-  font-size: 1.125rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 a {
   background-color: transparent;
-  color: #3182ce;
+  color: var(--accent);
   text-decoration: underline;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -43,12 +49,11 @@ ol, ul {
   padding: 0;
 }
 
-h1, h4, h5, h6 {
-  font-weight: inherit;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin: 0;
 }
 
 audio, canvas, embed, iframe, img, object, svg, video {
@@ -65,6 +70,7 @@ img, video {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 1rem;
 }
 
 @media (min-width: 640px) {
@@ -91,15 +97,6 @@ img, video {
   }
 }
 
-.table {
-  display: table;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .mb-2 {
   margin-bottom: .5rem;
 }
@@ -110,10 +107,6 @@ img, video {
 
 .opacity-100 {
   opacity: 1;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .visible {
@@ -148,16 +141,16 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   margin-bottom: 1.5rem;
-  padding: 8rem 1rem 3rem;
+  padding: 10rem 1rem 6rem;
 }
 
 h1 {
-  background-color: #fff;
+  background-color: var(--light);
   margin: auto;
   padding: .5rem 1.5rem;
   font-size: 2.25rem;
+  transform: rotate(-3deg);
 }
 
 h2 {
@@ -170,13 +163,22 @@ h2 {
 }
 
 h2::before {
-  background-image: linear-gradient(to right, #daa520, transparent 50%);
+  background-image: linear-gradient(to right, rgb(var(--primary)), transparent 50%);
   top: 0;
   height: .25rem;
   width: 50%;
   content: "";
   position: absolute;
   left: 0;
+}
+
+#sommaire + ol {
+  margin: 0 0 6rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  position: relative;
 }
 
 #sommaire + ol::after {
@@ -214,12 +216,9 @@ ul {
   list-style-type: disc;
 }
 
-footer a {
-  color: #c53030;
-}
-
 a:hover {
-  color: #2c5282;
+  filter: invert(0.5);
+  transition: filter 0.2s ease-in-out;
 }
 
 footer {
@@ -228,13 +227,13 @@ footer {
   justify-content: center;
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   text-align: center;
-  background-color: #feebc8;
+  background-color: rgba(var(--primary), 0.4);
   margin-top: 3rem;
   padding: 2rem;
 }
 
 #back-top, footer small {
-  color: #718096;
+  color: var(--shade);
 }
 
 footer small {
@@ -258,56 +257,5 @@ footer small {
 }
 
 #back-top:hover {
-  color: #3182ce;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
-}
-
-#sommaire {
-  text-align: right;
-  font-size: 1.875rem;
-  margin-top: 1rem;
-  margin-bottom: 0;
-  padding-top: 1rem;
-  padding-bottom: .5rem;
-  border-width: 0;
-  font-weight: 400;
-}
-
-#sommaire + ol, #sommaire + ol > li {
-  text-align: right;
-  display: flex;
-  justify-content: flex-end;
-}
-
-#sommaire, #sommaire + ol {
-  padding-right: 2rem;
-  background-color: #fffaf0;
-}
-
-#sommaire + ol {
-  list-style-type: none;
-  margin-left: 0;
-  margin-bottom: 6rem;
-  padding-bottom: 2rem;
-  position: relative;
-  font-size: 1.25rem;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-#sommaire + ol > li {
-  min-width: 250px;
-  max-width: 30%;
-  margin-left: 1.5rem;
-}
-
-#sommaire + ol > li > a {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-}
-
-@media only screen and (max-width: 400px) {
-  #sommaire + ol > li {
-    width: 100%;
-  }
 }
