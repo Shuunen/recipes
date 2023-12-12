@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { copyFile, readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync } from 'fs'
 import { globcat } from 'globcat'
 import Showdown from 'showdown'
 import ShowdownToc from 'showdown-toc'
@@ -23,10 +23,6 @@ const buildHtml = () => globcat('src/**/*.md', (error, md) => {
   writeFileSync('public/index.html', mdToHtml(md, true))
 })
 
-const buildCss = () => copyFile('src/styles.css', 'public/styles.css', error => { if (error) throw error })
-
 buildHtml()
-
-buildCss()
 
 console.timeEnd(timerLabel)
