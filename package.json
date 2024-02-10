@@ -6,7 +6,7 @@
   "devDependencies": {
     "chokidar": "3",
     "eslint": "8",
-    "eslint-plugin-html": "7",
+    "eslint-plugin-html": "8",
     "eslint-plugin-unicorn": "51",
     "globcat": "3",
     "npm-parallel": "2",
