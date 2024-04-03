@@ -15,8 +15,8 @@ devDependencies:
     specifier: '8'
     version: 8.0.0
   eslint-plugin-unicorn:
-    specifier: '51'
-    version: 51.0.0(eslint@8.55.0)
+    specifier: '52'
+    version: 52.0.0(eslint@8.55.0)
   globcat:
     specifier: '3'
     version: 3.0.1
@@ -490,8 +490,8 @@ packages:
       htmlparser2: 9.1.0
     dev: true
 
-  /eslint-plugin-unicorn@51.0.0(eslint@8.55.0):
-    resolution: {integrity: sha512-104L+VrZQ0RlyTYQPmF0ofoN1/rot1U/BoCSUDTTiPgumzA/QUzDwUqbR4Q0laOYXi5sYI2HDrJQ/b5PlJteCA==}
+  /eslint-plugin-unicorn@52.0.0(eslint@8.55.0):
+    resolution: {integrity: sha512-1Yzm7/m+0R4djH0tjDjfVei/ju2w3AzUGjG6q8JnuNIL5xIwsflyCooW5sfBvQp2pMYQFSWWCFONsjCax1EHng==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: '>=8.56.0'
