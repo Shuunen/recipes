@@ -7,7 +7,7 @@
     "chokidar": "3",
     "eslint": "8",
     "eslint-plugin-html": "8",
-    "eslint-plugin-unicorn": "53",
+    "eslint-plugin-unicorn": "54",
     "globcat": "3",
     "npm-parallel": "2",
     "repo-check": "1.35",
