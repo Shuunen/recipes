@@ -24,8 +24,8 @@ devDependencies:
     specifier: '2'
     version: 2.0.1
   repo-check:
-    specifier: '1.35'
-    version: 1.35.1
+    specifier: '1.36'
+    version: 1.36.0
   servor:
     specifier: '4'
     version: 4.0.2
@@ -1299,12 +1299,12 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /repo-check@1.35.1:
-    resolution: {integrity: sha512-aB6SHcQONYOALH4uoU/ULfwKaryb+lTCY33jJjAMz2nlt+eTk0cWaig7aarY+KfPqZQlYc5y8TnOn8T2ZcNMLw==}
+  /repo-check@1.36.0:
+    resolution: {integrity: sha512-U0BmkVwNNw6O2FHPy7p0fyMy1qdHB/xNxRX9U6lsKgd8cMUF3SSgFiyR+tXEaUqEb/3WLaV+SON4Jizj0dw+0g==}
     hasBin: true
     dependencies:
       arg: 5.0.2
-      shuutils: 7.7.0
+      shuutils: 8.0.0
       sort-json: 2.0.1
     dev: true
 
@@ -1382,13 +1382,6 @@ packages:
     hasBin: true
     dependencies:
       commander: 9.5.0
-    dev: true
-
-  /shuutils@7.7.0:
-    resolution: {integrity: sha512-ultnGsBIR9zdHCFDxqWO9YlUBfDa5+oXSi5Gi45o5ne30cNunDzr6sKRntks73VhmgBXQG4IhlbxW3t3cIpfLw==}
-    hasBin: true
-    dependencies:
-      tiny-glob: 0.2.9
     dev: true
 
   /shuutils@8.0.0:
