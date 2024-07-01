@@ -5,7 +5,7 @@
   "description": "Personal recipes collection (in french)",
   "devDependencies": {
     "chokidar": "3",
-    "eslint": "8",
+    "eslint": "9",
     "eslint-plugin-html": "8",
     "eslint-plugin-unicorn": "54",
     "globcat": "3",
