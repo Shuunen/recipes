@@ -6,7 +6,7 @@
   "devDependencies": {
     "chokidar": "3",
     "eslint": "*",
-    "eslint-plugin-shuunen": "0.1",
+    "eslint-plugin-shuunen": "0.3",
     "globcat": "3",
     "npm-parallel": "2",
     "repo-check": "1.37",
