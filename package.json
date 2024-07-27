@@ -8,6 +8,7 @@
     "eslint": "*",
     "eslint-plugin-shuunen": "0.3",
     "globcat": "3",
+    "markdownlint": "0.34",
     "npm-parallel": "2",
     "repo-check": "1.37",
     "servor": "4",

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint/v0.34.0/schema/markdownlint-config-schema.json",
+  "MD013": false,
+  "MD043": {
+    "headings": [
+      "+",
+      "## Recette",
+      "## Retour d'expérience",
+      "## Source"
+    ]
+  }
+}

@@ -1,7 +1,10 @@
 {
-  "css.validate": false,
   "cSpell.words": [
     "globcat"
+  ],
+  "css.validate": false,
+  "markdownlint.customRules": [
+    "./lint/first-line.cjs"
   ],
   "workbench.colorCustomizations": {
     "activityBar.background": "#4B1A47",
