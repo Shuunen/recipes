@@ -4,7 +4,7 @@
   "bugs": "https://github.com/Shuunen/recipes/issues",
   "description": "Personal recipes collection (in french)",
   "devDependencies": {
-    "chokidar": "3",
+    "chokidar": "4",
     "eslint": "*",
     "eslint-plugin-shuunen": "0.3",
     "globcat": "3",
