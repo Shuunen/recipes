@@ -36,8 +36,8 @@ devDependencies:
     specifier: '1'
     version: 1.1.0(showdown@2.1.0)
   shuutils:
-    specifier: '9.0'
-    version: 9.0.0
+    specifier: '10.0'
+    version: 10.0.0
   watchlist:
     specifier: '0'
     version: 0.3.1
@@ -1947,8 +1947,8 @@ packages:
       commander: 9.5.0
     dev: true
 
-  /shuutils@9.0.0:
-    resolution: {integrity: sha512-MfWfhceiekvjZV5PFF3CTWjVBBNOPaREQZ72cBPt3W2WFJ8OMorHuRgaCgqdl7UGQzA651u0xNH3ZZAfm4t+sA==}
+  /shuutils@10.0.0:
+    resolution: {integrity: sha512-A5/PcShJU4VsJ2l6CIFNRz6INFWMeBZDd0memALTy5LY4RUyNlhZIIzyi5yl7Pjk5uyQG5SIbycvAj546YNonQ==}
     hasBin: true
     dependencies:
       tiny-glob: 0.2.9
