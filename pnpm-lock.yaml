@@ -18,8 +18,8 @@ devDependencies:
     specifier: '3'
     version: 3.1.1
   markdownlint:
-    specifier: '0.35'
-    version: 0.35.0
+    specifier: '0.36'
+    version: 0.36.0
   npm-parallel:
     specifier: '2'
     version: 2.0.1
@@ -1461,17 +1461,17 @@ packages:
       uc.micro: 2.1.0
     dev: true
 
-  /markdownlint-micromark@0.1.10:
-    resolution: {integrity: sha512-no5ZfdqAdWGxftCLlySHSgddEjyW4kui4z7amQcGsSKfYC5v/ou+8mIQVyg9KQMeEZLNtz9OPDTj7nnTnoR4FQ==}
+  /markdownlint-micromark@0.1.12:
+    resolution: {integrity: sha512-RlB6EwMGgc0sxcIhOQ2+aq7Zw1V2fBnzbXKGgYK/mVWdT7cz34fteKSwfYeo4rL6+L/q2tyC9QtD/PgZbkdyJQ==}
     engines: {node: '>=18'}
     dev: true
 
-  /markdownlint@0.35.0:
-    resolution: {integrity: sha512-wgp8yesWjFBL7bycA3hxwHRdsZGJhjhyP1dSxKVKrza0EPFYtn+mHtkVy6dvP1kGSjovyG5B8yNP6Frj0UFUJg==}
+  /markdownlint@0.36.0:
+    resolution: {integrity: sha512-ULhCJrt12HC8jZPCzc6yN3g2l8KaFR8bYHStnffzCOwY33hPrC6ic1pz1tDNs/ydKU2UiETOtL5nLYJNZLOd6w==}
     engines: {node: '>=18'}
     dependencies:
       markdown-it: 14.1.0
-      markdownlint-micromark: 0.1.10
+      markdownlint-micromark: 0.1.12
     dev: true
 
   /mdurl@2.0.0:
