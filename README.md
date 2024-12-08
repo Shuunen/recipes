@@ -36,3 +36,11 @@
 - [SvgOmg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [Vecteezy](https://www.vecteezy.com/free-vector/macaroni) : funky macaroni pattern background (I made it repeatable)
 - [Watchlist](https://github.com/lukeed/watchlist) : recursively watch a list of directories & run a command on any file system
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/Shuunen/recipes.svg?variant=adaptive)](https://starchart.cc/Shuunen/recipes)
+
+## Page views
+
+[![Free Website Counter](https://www.websitecounterfree.com/c.php?d=9&id=63986&s=12)](https://www.websitecounterfree.com)

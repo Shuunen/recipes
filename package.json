@@ -14,7 +14,7 @@
     "servor": "4",
     "showdown": "2.1",
     "showdown-toc": "1",
-    "shuutils": "9.0",
+    "shuutils": "10.1",
     "watchlist": "0"
   },
   "files": [
@@ -32,10 +32,10 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shuunen/recipes.git"
+    "url": "git+https://github.com/Shuunen/recipes.git"
   },
   "scripts": {
-    "build": "node bin/build && unique-mark public/index.html && echo build success",
+    "build": "node bin/build && unique-mark public/index.{html} && echo build success",
     "build:watch": "watchlist src -eager -- pnpm build",
     "check": "pnpm install && echo install success && pnpm build && repo-check && echo repo-check success && pnpm lint && echo check success",
     "dev": "parallel serve build:watch",
