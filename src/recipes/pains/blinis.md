@@ -20,4 +20,8 @@ Pour 2 personnes :
 
 ## Retour d'expérience
 
-Recette pazencore testée
+Recette pazencore testée.
+
+## Source
+
+[@lou.faitdesvideos](https://www.instagram.com/reel/DDO__dnoZsR/)
