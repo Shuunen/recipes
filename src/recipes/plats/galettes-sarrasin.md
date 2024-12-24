@@ -1,8 +1,8 @@
 # Galettes sarrasin 🍪
 
-## Version de base
+## Recette
 
-Pour 4 personnes :
+Version de base, pour 4 personnes :
 
 - 300 g de farine de sarrasin
 - 50g de farine semi complète
@@ -10,12 +10,18 @@ Pour 4 personnes :
 - 10g de sel
 - Une cuillerée à soupe d'huile
 
-## Version grand-mère
-
-Pour 4 personnes :
+Version grand-mère, pour 4 personnes :
 
 - 300 g de farine de sarrasin
 - 70 g de farine de blé
 - 1 oeuf entier
 - gros sel
 - eau et lait en quantité égale
+
+## Retour d'expérience
+
+Recette à tester.
+
+## Source
+
+Une anonyme du Finistère ^^

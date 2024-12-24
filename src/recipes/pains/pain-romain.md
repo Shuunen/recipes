@@ -37,3 +37,7 @@ Pour la conservation :
 
 - enrouler le pain dans un torchon (mais pas dès la sortie du four car le pain est encore très humide)
 - j'utilise des épluchures de carottes dans le torchon pour ralentir l'assèchement du pain
+
+## Source
+
+Je ne sais plus :p
