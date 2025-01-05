@@ -39,8 +39,8 @@ importers:
         specifier: '1'
         version: 1.1.0(showdown@2.1.0)
       shuutils:
-        specifier: '10.1'
-        version: 10.1.0
+        specifier: '10.2'
+        version: 10.2.1
       watchlist:
         specifier: '0'
         version: 0.3.1
@@ -1212,6 +1212,10 @@ packages:
 
   shuutils@10.1.0:
     resolution: {integrity: sha512-Q+8PaUIik4W3bEE2xtDMZvYC7y4B8mnh3x7cneXPJmry0esVRir+hSZHh5Kjh6rtV0pYj+eKtAXBxJ8LDqPZhA==}
+    hasBin: true
+
+  shuutils@10.2.1:
+    resolution: {integrity: sha512-jYwaBGltqZQaXc39y1xSUcwWW528gnH98vUwqNVqK5M+mFvmtEM8ZMd7FW1S0QqIj8ob7TXIIzg+01RbAe13pg==}
     hasBin: true
 
   signal-exit@4.1.0:
@@ -2693,6 +2697,10 @@ snapshots:
       commander: 9.5.0
 
   shuutils@10.1.0:
+    dependencies:
+      tiny-glob: 0.2.9
+
+  shuutils@10.2.1:
     dependencies:
       tiny-glob: 0.2.9
 
