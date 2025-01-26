@@ -1,13 +1,13 @@
-# Gateau au noix 🥜
+# Gateau au yaourt 🍰
 
-## Ingredients
+## Ingrédients
 
-- 150g de noix concassées
-- 100g de sucre glace
-- 100g de beurre fondu
-- 3 œufs
-- 40g de farine
-- 2 càs de Cointreau
+- 1/2 paquet de levure
+- 1 pot de yaourt (20cL)
+- 1/2 pot d'huile
+- 2 pots de sucre
+- 3 pots de farine (dont 1 de maïzena, facultatif)
+- 2 oeufs
 
 ## Recette
 
@@ -18,8 +18,8 @@
 
 ## Retour d'expérience
 
-Excellent, vraiment excellent, merci tante Mouche !
+A tester !
 
 ## Source
 
-<https://www.marmiton.org/recettes/recette_gateau-aux-noix-de-tante-mouche_24542.aspx>
+Unclassified :p
