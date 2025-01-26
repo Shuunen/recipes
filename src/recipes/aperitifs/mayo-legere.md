@@ -1,6 +1,6 @@
 # Mayonnaise légère 🥚
 
-> et fait maison !
+> 135 kcal pour 100 g
 
 ## Ingredients
 
