@@ -39,8 +39,8 @@ importers:
         specifier: '1'
         version: 1.1.0(showdown@2.1.0)
       shuutils:
-        specifier: '10.4'
-        version: 10.4.0
+        specifier: '10.5'
+        version: 10.5.0
       watchlist:
         specifier: '0'
         version: 0.3.1
@@ -1133,9 +1133,6 @@ packages:
     engines: {node: '>= 0.4'}
     hasBin: true
 
-  resultx@2.0.2:
-    resolution: {integrity: sha512-wWaAwKrlQlIa4IIGkQi7UE4tt3XwoDI+XRDTYY8hVVaqQSwnQR4tDkLweSSvjtKNsUC86MKfok65+hNNLbZW4Q==}
-
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
@@ -1171,10 +1168,6 @@ packages:
 
   showdown@2.1.0:
     resolution: {integrity: sha512-/6NVYu4U819R2pUIk79n67SYgJHWCce0a5xTP979WbNp0FL9MN1I1QK662IDU1b6JzKTvmhgI7T7JYIxBi3kMQ==}
-    hasBin: true
-
-  shuutils@10.4.0:
-    resolution: {integrity: sha512-PMeon5coA7kQEjB0HQUalqqWBd9RLbeopVW3CwGd1sE9wFsgwNm1aBTKi+QMhym+toHLHoSr9ai5kFMe/VUa7g==}
     hasBin: true
 
   shuutils@10.5.0:
@@ -2588,8 +2581,6 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  resultx@2.0.2: {}
-
   reusify@1.0.4: {}
 
   run-parallel@1.2.0:
@@ -2615,11 +2606,6 @@ snapshots:
   showdown@2.1.0:
     dependencies:
       commander: 9.5.0
-
-  shuutils@10.4.0:
-    dependencies:
-      resultx: 2.0.2
-      tiny-glob: 0.2.9
 
   shuutils@10.5.0:
     dependencies:
