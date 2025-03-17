@@ -32,6 +32,7 @@ const mdToHtml = (md, updateTemplate = false) => {
  * @returns {void}
  */
 const buildHtml = () => globcat('src/**/*.md', (error, md) => {
+  // eslint-disable-next-line no-restricted-syntax
   if (error) throw error
   writeFileSync('public/index.html', mdToHtml(md, true))
 })

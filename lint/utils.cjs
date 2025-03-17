@@ -1,3 +1,4 @@
+// eslint-disable-next-line unicorn/prevent-abbreviations
 'use strict'
 
 const { writeFileSync } = require("node:fs")
@@ -9,7 +10,7 @@ const path = require('node:path')
  * @param {string} message The message to write
  * @returns {void}
  */
-function writeLog (parameters, message) {
+function writeLog(parameters, message) {
   const name = path.basename(parameters.name)
   const line = `${name} : ${message}`
   // eslint-disable-next-line no-undef
