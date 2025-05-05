@@ -21,6 +21,7 @@
 
 ## Thanks
 
+- [Boxy Svg](https://boxy-svg.com) : simple & effective svg editor
 - [Chokidar](https://github.com/paulmillr/chokidar) : minimal and efficient cross-platform file watching library
 - [Eslint](https://eslint.org) : super tool to find & fix problems
 - [Github](https://github.com) : this great, free and evolving platform
@@ -33,6 +34,7 @@
 - [Showdown](https://github.com/showdownjs/showdown) : a Markdown to HTML converter written in Javascript
 - [ShowdownJs](https://github.com/showdownjs/showdown) : great lib to turn Markdown into Html
 - [Shuutils](https://github.com/Shuunen/shuutils) : collection of pure JS utils
+- [Svg Omg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [SvgOmg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [Vecteezy](https://www.vecteezy.com/free-vector/macaroni) : funky macaroni pattern background (I made it repeatable)
 - [Watchlist](https://github.com/lukeed/watchlist) : recursively watch a list of directories & run a command on any file system
