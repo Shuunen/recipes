@@ -27,8 +27,8 @@ importers:
         specifier: '2'
         version: 2.0.1
       repo-check:
-        specifier: '1.42'
-        version: 1.42.0
+        specifier: '1.43'
+        version: 1.43.0
       servor:
         specifier: '4'
         version: 4.0.2
@@ -1127,8 +1127,8 @@ packages:
     resolution: {integrity: sha512-cnE+y8bz4NhMjISKbgeVJtqNbtf5QpjZP+Bslo+UqkIt9QPnX9q095eiRRASJG1/tz6dlNr6Z5NsBiWYokp6EQ==}
     hasBin: true
 
-  repo-check@1.42.0:
-    resolution: {integrity: sha512-AsmKM/MNM26fjJPqob8oMw+7m28/pLUMpH8u05AF1yHLOeW2S1+Hhx6iPSN1T3XBOsO0d7ol1WgCcVF75ZjTYA==}
+  repo-check@1.43.0:
+    resolution: {integrity: sha512-vKeQysGHFjT27m8kXUnspSdoIPnvXh+VXzj/XZHJzXbCCAWnn/pIUyJTWjtO5JhJcOeT+C0PyfloN7aBZHhXiA==}
     hasBin: true
 
   resolve-from@4.0.0:
@@ -1171,10 +1171,6 @@ packages:
 
   showdown@2.1.0:
     resolution: {integrity: sha512-/6NVYu4U819R2pUIk79n67SYgJHWCce0a5xTP979WbNp0FL9MN1I1QK662IDU1b6JzKTvmhgI7T7JYIxBi3kMQ==}
-    hasBin: true
-
-  shuutils@10.5.0:
-    resolution: {integrity: sha512-XIBlpWI8zIRYV1f1hdIApAPtsThzqBkIoLfBpmbQY+RVTwDn3mtfJ/ir3ifhdsnoQjcDKkcdiJGdnoLje/KU3w==}
     hasBin: true
 
   shuutils@10.6.0:
@@ -2571,10 +2567,10 @@ snapshots:
     dependencies:
       jsesc: 3.0.2
 
-  repo-check@1.42.0:
+  repo-check@1.43.0:
     dependencies:
       arg: 5.0.2
-      shuutils: 10.5.0
+      shuutils: 10.6.0
       sort-json: 2.0.1
 
   resolve-from@4.0.0: {}
@@ -2608,10 +2604,6 @@ snapshots:
   showdown@2.1.0:
     dependencies:
       commander: 9.5.0
-
-  shuutils@10.5.0:
-    dependencies:
-      tiny-glob: 0.2.9
 
   shuutils@10.6.0:
     dependencies:
