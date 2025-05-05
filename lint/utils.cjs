@@ -1,4 +1,3 @@
-// eslint-disable-next-line unicorn/prevent-abbreviations
 'use strict'
 
 const { writeFileSync } = require("node:fs")
