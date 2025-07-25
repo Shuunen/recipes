@@ -5,7 +5,7 @@
   "description": "Personal recipes collection (in french)",
   "devDependencies": {
     "chokidar": "4",
-    "eslint": "9.31",
+    "eslint": "9.32",
     "eslint-plugin-shuunen": "1.3",
     "globcat": "3",
     "markdownlint": "0.38",
