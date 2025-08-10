@@ -10,6 +10,12 @@
 
 > My personal [ french ] recipes
 
+## Archived
+
+This current repo is archived since it migrated to [Shuunen/monorepo](https://github.com/Shuunen/monorepo/tree/master/apps/recipes).
+
+Further development will be done there 🚀
+
 ## Demo
 
 ![demo](docs/demo.gif)
