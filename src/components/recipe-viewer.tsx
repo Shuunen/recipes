@@ -43,34 +43,35 @@ export function RecipeViewer() {
   const [error, setError] = useState<string | undefined>(undefined);
 
   useEffect(() => {
+    let cancelled = false;
+
     if (!category || !recipe) {
       setError("Paramètres manquants");
       setIsLoading(false);
-      return;
+    } else {
+      setIsLoading(true);
+      setError(undefined);
+      setRecipeComponent(undefined);
+      /* v8 ignore start */
+      import(`../recipes/${category}/${recipe}.md`)
+        // oxlint-disable-next-line promise/prefer-await-to-then
+        .then((module: RecipeModule) => {
+          if (!cancelled) {
+            setRecipeComponent(() => module.ReactComponent);
+            setIsLoading(false);
+          }
+          return undefined;
+        })
+        // oxlint-disable-next-line promise/prefer-await-to-then
+        .catch(() => {
+          if (!cancelled) {
+            setError(`La recette "${recipe}" dans la catégorie "${category}" n'existe pas.`);
+            setIsLoading(false);
+          }
+        });
+      /* v8 ignore stop */
     }
 
-    let cancelled = false;
-    setIsLoading(true);
-    setError(undefined);
-    setRecipeComponent(undefined);
-    /* v8 ignore start */
-    import(`../recipes/${category}/${recipe}.md`)
-      // oxlint-disable-next-line promise/prefer-await-to-then
-      .then((module: RecipeModule) => {
-        if (!cancelled) {
-          setRecipeComponent(() => module.ReactComponent);
-          setIsLoading(false);
-        }
-        return undefined;
-      })
-      // oxlint-disable-next-line promise/prefer-await-to-then
-      .catch(() => {
-        if (!cancelled) {
-          setError(`La recette "${recipe}" dans la catégorie "${category}" n'existe pas.`);
-          setIsLoading(false);
-        }
-      });
-    /* v8 ignore stop */
     return () => {
       cancelled = true;
     };

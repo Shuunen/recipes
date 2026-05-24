@@ -8,6 +8,5 @@
   "js/ts.experimental.useTsgo": true,
   "oxc.fixKind": "all",
   "oxc.typeAware": true,
-  "oxc.unusedDisableDirectives": "deny",
-  "typescript.native-preview.tsdk": "/home/rominou/Projects/github/recipes/node_modules/@typescript/native-preview"
+  "oxc.unusedDisableDirectives": "deny"
 }

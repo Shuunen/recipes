@@ -1,6 +1,7 @@
 # Recipes
 
 <!-- markdownlint-disable MD043 -->
+
 [![GitHub license](https://img.shields.io/github/license/shuunen/recipes.svg?color=informational)](https://github.com/Shuunen/recipes/blob/master/LICENSE)
 [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/recettes-shuunen.netlify.app.svg?publish)](https://observatory.mozilla.org/analyze/recettes-shuunen.netlify.app)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/Shuunen/recipes?style=flat)](https://codeclimate.com/github/Shuunen/recipes)
