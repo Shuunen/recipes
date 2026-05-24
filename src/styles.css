@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    translate: 0 6px;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out both;
+}
+
+/* Delay so fast loads never show the loading message */
+.animate-fade-in-delayed {
+  animation: fade-in 0.2s ease-out 0.3s both;
+  opacity: 0;
+}
+
 @theme inline {
   --color-primary: darkred;
   --color-info: darkred;

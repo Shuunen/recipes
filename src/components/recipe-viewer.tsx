@@ -27,7 +27,7 @@ function ErrorMessage({ error }: { error?: string }) {
 // oxlint-disable-next-line react/no-multi-comp
 function LoadingMessage() {
   return (
-    <div className="flex h-full items-center justify-center" data-testid="loading">
+    <div className="animate-fade-in-delayed flex h-full items-center justify-center" data-testid="loading">
       <div className="text-lg">Chargement de la recette...</div>
     </div>
   );
@@ -93,7 +93,7 @@ export function RecipeViewer() {
           <HomeIcon />
         </Link>
       </Button>
-      <div className="card">
+      <div className="animate-fade-in card">
         <RecipeComponent />
         <Divider />
       </div>
