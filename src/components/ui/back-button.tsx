@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export function BackButton({ to }: { to: string }) {
   return (
-    <div className="sticky z-10 h-0 overflow-visible" style={{ top: "calc(20rem)" }}>
+    <div className="sticky z-10 hidden h-0 overflow-visible md:block" style={{ top: "calc(20rem)" }}>
       <Link
         className="group absolute top-0 -left-14 flex items-center gap-2 rounded-full bg-primary/80 px-4 py-2 whitespace-nowrap text-white no-underline shadow-lg hover:-translate-x-16 hover:bg-primary hover:shadow-[4px_8px_24px_rgba(0,0,0,0.35)]"
         style={{
