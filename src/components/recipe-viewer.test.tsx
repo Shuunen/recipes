@@ -51,27 +51,23 @@ describe(RecipeViewer, () => {
     renderRecipeViewer(["/recipes/dessert/banana-bread"]);
     await waitFor(
       () => {
-        const loading = screen.queryByText("Chargement de la recette...");
-        expect(loading).toBeNull();
+        expect(screen.queryByTestId("loading")).toBeNull();
       },
       { timeout: 5000 },
     );
-    const hasContent = screen.queryByTestId("recipe");
-    const hasError = screen.queryByTestId("error");
-    expect(hasContent || hasError).toBeInstanceOf(HTMLElement);
+    expect(screen.getByTestId("recipe")).toBeInstanceOf(HTMLElement);
   });
 
   it("RecipeViewer F should render home link when recipe loads", async () => {
     renderRecipeViewer(["/recipes/dessert/banana-bread"]);
     await waitFor(
       () => {
-        const loading = screen.queryByText("Chargement de la recette...");
-        expect(loading).toBeNull();
+        expect(screen.queryByTestId("loading")).toBeNull();
       },
       { timeout: 5000 },
     );
-    const recipeContainer = screen.queryByTestId("recipe");
-    if (recipeContainer) expect(screen.getByText("Retour à l'accueil")).toBeInstanceOf(HTMLElement);
+    expect(screen.getByTestId("recipe")).toBeInstanceOf(HTMLElement);
+    expect(screen.getByText("Retour à l'accueil")).toBeInstanceOf(HTMLElement);
   });
 
   it("RecipeViewer G should test error message component", () => {

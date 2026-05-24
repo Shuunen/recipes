@@ -18,6 +18,6 @@ describe(App, () => {
         <App />
       </BrowserRouter>,
     );
-    expect(getByRole("heading", { level: 1 }).textContent).toContain("Les recettes deRomain !");
+    expect(getByRole("heading", { level: 1 }).textContent).toMatch(/Les recettes de\s*Romain\s*!/);
   });
 });
