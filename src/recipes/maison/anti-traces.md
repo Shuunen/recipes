@@ -1,8 +1,12 @@
+---
+cSpell:locale fr
+---
+
 # Anti Traces 💦
 
 Ce mélange permet de nettoyer et laisser un film protecteur qui empêche les futures traces d'apparaître comme les traces de doigts par exemple.
 
-## Recette
+## Ingrédients
 
 Pour 16 cl :
 
@@ -11,7 +15,9 @@ Pour 16 cl :
 - 2 cl de liquide vaisselle (pas concentré)
 - 10 cl d'eau
 
-Mélanger le tout dans un flacon spray.
+## Recette
+
+1. Mélanger le tout dans un flacon spray.
 
 ## Retour d'expérience
 
