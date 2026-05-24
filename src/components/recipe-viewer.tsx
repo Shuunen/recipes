@@ -2,6 +2,7 @@ import { HomeIcon, MoveLeftIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Divider } from "./divider";
+import { BackButton } from "./ui/back-button";
 import { Button } from "./ui/button";
 
 type RecipeParams = {
@@ -86,16 +87,19 @@ export function RecipeViewer() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center" data-testid="recipe">
-      <Button asChild className="fixed bottom-4 z-10 flex rounded-xl border-2 border-orange-800" name="back-home" variant="outline">
-        <Link to="/">
-          <MoveLeftIcon />
-          Retour à l&apos;accueil
-          <HomeIcon />
-        </Link>
-      </Button>
-      <div className="animate-fade-in card">
-        <RecipeComponent />
-        <Divider />
+      <div className="my-24 w-full max-w-2xl">
+        <BackButton to="/" />
+        <div className="animate-fade-in card">
+          <RecipeComponent />
+          <Divider />
+        </div>
+        <Button asChild className="mx-auto flex w-fit rounded-xl border-2 border-orange-800 py-5" name="back-home" variant="outline">
+          <Link to="/">
+            <MoveLeftIcon />
+            Retour à l&apos;accueil
+            <HomeIcon />
+          </Link>
+        </Button>
       </div>
     </div>
   );
