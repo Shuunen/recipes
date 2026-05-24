@@ -1,13 +1,23 @@
+---
+cSpell:locale fr
+---
+
 # Shampoing 🧼
 
-## Recette
+## Ingrédients
 
+Pour un flacon de 50ml :
+
+- 50 ml de shampoing neutre
 - 2 gouttes d'huile essentielle de Palmarosa
 - 4 gouttes d'huile essentielle de Cèdre de l'Atlas
 - 4 gouttes d'huile essentielle de Tea Tree
 - 6 gouttes d'huile essentielle de Lavande Vraie
 
-Complétez avec du shampoing neutre jusqu'à remplissage du flacon de 50ml
+## Recette
+
+1. Mélanger le shampoing neutre avec les huiles essentielles
+2. Option : ajouter du colorant alimentaire
 
 ## Retour d'expérience
 

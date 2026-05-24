@@ -1,15 +1,13 @@
 {
-  "cSpell.words": [
-    "globcat",
-    "zatar"
-  ],
-  "css.validate": false,
-  "markdownlint.customRules": [
-    "./lint/first-line.cjs"
-  ],
-  "workbench.colorCustomizations": {
-    "activityBar.background": "#4B1A47",
-    "titleBar.activeBackground": "#6A2464",
-    "titleBar.activeForeground": "#FDF9FC"
-  }
+  "[markdown]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "cSpell.words": ["autoplan", "gstack", "recettes", "Romain"],
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "js/ts.experimental.useTsgo": true,
+  "oxc.fixKind": "all",
+  "oxc.typeAware": true,
+  "oxc.unusedDisableDirectives": "deny",
+  "typescript.native-preview.tsdk": "/home/rominou/Projects/github/recipes/node_modules/@typescript/native-preview"
 }

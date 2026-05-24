@@ -1,6 +1,10 @@
-# Ultima pasta 🍝
+---
+cSpell:locale fr
+---
 
-## Ingredients
+# Pâtes colombiennes 🍝
+
+## Ingrédients
 
 - 42kg de coke
 - 1g de farine complète non coupée
@@ -19,4 +23,4 @@ Une vraie cure de jouvence !
 
 ## Source
 
-<https://giphy.com/explore/scarface-1983>
+[Scarface sur Giphy](https://giphy.com/explore/scarface-1983)

@@ -1,6 +1,10 @@
+---
+cSpell:locale fr
+---
+
 # Dentifrice 🦷
 
-## Recette
+## Ingrédients
 
 Pour 100 grammes :
 
@@ -9,6 +13,12 @@ Pour 100 grammes :
 - 10 grammes de siwak
 - 2 grammes de charbon végétal actif
 - 40 gouttes d'HE (menthe verte bio par exemple)
+
+## Recette
+
+1. Mélanger la gomme d'acacia, l'argile, le siwak et le charbon végétal
+2. Ajouter les gouttes d'HE et mélanger à nouveau
+3. Conserver dans un pot hermétique
 
 ## Retour d'expérience
 
