@@ -22,6 +22,9 @@
     "test:unit": {
       "inputs": ["src/**/*.{ts,tsx}", "vite.config.ts"],
       "outputs": ["coverage/**"]
+    },
+    "lint:recipes": {
+      "inputs": ["src/recipes/**/*.md", "src/bin/lint.*.ts"]
     }
   }
 }
