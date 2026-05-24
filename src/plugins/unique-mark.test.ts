@@ -37,36 +37,22 @@ describe("uniqueMark plugin", async () => {
 
   it("injects mark into HTML assets via generateBundle", () => {
     const plugin = uniqueMark();
-    if (typeof plugin.configResolved === "function")
-      // @ts-expect-error minimal config mock
-      plugin.configResolved({ root: "/project" });
-
-    const bundle: Record<string, Record<string, string>> = {
-      "index.html": { source: '<html><head><meta name="unique-mark" content="OLD"></head></html>' },
-    };
-
-    if (typeof plugin.generateBundle === "function")
-      // @ts-expect-error minimal options mock
-      plugin.generateBundle({}, bundle);
-
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ root: "/project" });
+    const bundle = { "index.html": { source: '<html><head><meta name="unique-mark" content="OLD"></head></html>' } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
     const source = bundle["index.html"]?.source ?? "";
     expect(source).not.toContain('content="OLD"');
   });
 
   it("injects mark into JS assets and adds comment header", () => {
     const plugin = uniqueMark();
-    if (typeof plugin.configResolved === "function")
-      // @ts-expect-error minimal config mock
-      plugin.configResolved({ root: "/project" });
-
-    const bundle: Record<string, Record<string, string>> = {
-      "main.js": { code: "const v = '__unique-mark__';" },
-    };
-
-    if (typeof plugin.generateBundle === "function")
-      // @ts-expect-error minimal options mock
-      plugin.generateBundle({}, bundle);
-
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ root: "/project" });
+    const bundle = { "main.js": { code: "const v = '__unique-mark__';" } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
     const code = bundle["main.js"]?.code ?? "";
     expect(code).toContain("/* unique-mark");
     expect(code).not.toContain("__unique-mark__");
@@ -74,18 +60,11 @@ describe("uniqueMark plugin", async () => {
 
   it("injects mark into CSS assets and adds comment header", () => {
     const plugin = uniqueMark();
-    if (typeof plugin.configResolved === "function")
-      // @ts-expect-error minimal config mock
-      plugin.configResolved({ root: "/project" });
-
-    const bundle: Record<string, Record<string, string>> = {
-      "styles.css": { source: "body { /* __unique-mark__ */ }" },
-    };
-
-    if (typeof plugin.generateBundle === "function")
-      // @ts-expect-error minimal options mock
-      plugin.generateBundle({}, bundle);
-
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ root: "/project" });
+    const bundle = { "styles.css": { source: "body { /* __unique-mark__ */ }" } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
     const source = bundle["styles.css"]?.source ?? "";
     expect(source).toContain("/* unique-mark");
     expect(source).not.toContain("__unique-mark__");
@@ -93,20 +72,60 @@ describe("uniqueMark plugin", async () => {
 
   it("skips non-HTML/JS/CSS assets", () => {
     const plugin = uniqueMark();
-    if (typeof plugin.configResolved === "function")
-      // @ts-expect-error minimal config mock
-      plugin.configResolved({ root: "/project" });
-
-    const bundle: Record<string, Record<string, string>> = {
-      "image.png": { source: "binary-data" },
-    };
-
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ root: "/project" });
+    const bundle = { "image.png": { source: "binary-data" } };
     const originalSource = bundle["image.png"]?.source;
-
-    if (typeof plugin.generateBundle === "function")
-      // @ts-expect-error minimal options mock
-      plugin.generateBundle({}, bundle);
-
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
     expect(bundle["image.png"]?.source).toBe(originalSource);
+  });
+
+  it("warns when placeholder is present but no pattern matches", () => {
+    const plugin = uniqueMark();
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ root: "/project" });
+    // oxlint-disable-next-line no-empty-function
+    const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
+    const bundle = { "index.html": { source: "this contains unique-mark but not in a replaceable pattern" } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
+    expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining("unique-mark"));
+    warnSpy.mockRestore();
+  });
+
+  it("injects mark into element with matching id attribute", () => {
+    const plugin = uniqueMark();
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ root: "/project" });
+    const bundle = { "index.html": { source: '<div id="unique-mark">old content</div>' } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
+    const source = bundle["index.html"]?.source ?? "";
+    expect(source).toContain("abc1234");
+    expect(source).not.toContain(">old content<");
+  });
+
+  it("injects mark into meta tag with content attribute before name", () => {
+    const plugin = uniqueMark();
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ root: "/project" });
+    const bundle = { "index.html": { source: '<meta content="OLD" name="unique-mark">' } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
+    const source = bundle["index.html"]?.source ?? "";
+    expect(source).not.toContain('content="OLD"');
+    expect(source).toContain("abc1234");
+  });
+
+  it("injects mark into JSX .jsx() call with matching id", () => {
+    const plugin = uniqueMark();
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ root: "/project" });
+    const bundle = { "main.js": { code: 'Component.jsx(Tag,{id:"unique-mark"})' } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
+    const code = bundle["main.js"]?.code ?? "";
+    expect(code).toContain('children:"');
   });
 });

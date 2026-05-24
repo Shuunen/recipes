@@ -27,90 +27,54 @@ describe("cspNonce plugin", async () => {
 
   it("injects nonce into script tags in HTML assets", () => {
     const plugin = cspNonce();
-    if (typeof plugin.configResolved === "function")
-      // @ts-expect-error minimal config mock
-      plugin.configResolved({ publicDir: "/public" });
-
-    const bundle: Record<string, { source: string; type: string }> = {
-      "index.html": { source: "<html><body><script src='app.js'></script></body></html>", type: "asset" },
-    };
-
-    if (typeof plugin.generateBundle === "function")
-      // @ts-expect-error minimal options mock
-      plugin.generateBundle({}, bundle);
-
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ publicDir: "/public" });
+    const bundle = { "index.html": { source: "<html><body><script src='app.js'></script></body></html>", type: "asset" } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
     expect(bundle["index.html"]?.source).toContain('nonce="abc123"');
   });
 
   it("does not add nonce to script tags that already have one", () => {
     const plugin = cspNonce();
-    if (typeof plugin.configResolved === "function")
-      // @ts-expect-error minimal config mock
-      plugin.configResolved({ publicDir: "/public" });
-
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ publicDir: "/public" });
     const original = '<script nonce="existing">';
-    const bundle: Record<string, { source: string; type: string }> = {
-      "index.html": { source: original, type: "asset" },
-    };
-
-    if (typeof plugin.generateBundle === "function")
-      // @ts-expect-error minimal options mock
-      plugin.generateBundle({}, bundle);
-
+    const bundle = { "index.html": { source: original, type: "asset" } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
     expect(bundle["index.html"]?.source).toBe(original);
   });
 
   it("skips non-HTML assets", () => {
     const plugin = cspNonce();
-    if (typeof plugin.configResolved === "function")
-      // @ts-expect-error minimal config mock
-      plugin.configResolved({ publicDir: "/public" });
-
-    const bundle: Record<string, { source: string; type: string }> = {
-      "main.js": { source: "console.log('hi')", type: "chunk" },
-    };
-
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ publicDir: "/public" });
+    const bundle = { "main.js": { source: "console.log('hi')", type: "chunk" } };
     const originalSource = bundle["main.js"]?.source;
-
-    if (typeof plugin.generateBundle === "function")
-      // @ts-expect-error minimal options mock
-      plugin.generateBundle({}, bundle);
-
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
     expect(bundle["main.js"]?.source).toBe(originalSource);
   });
 
   it("skips HTML assets with non-string source", () => {
     const plugin = cspNonce();
-    if (typeof plugin.configResolved === "function")
-      // @ts-expect-error minimal config mock
-      plugin.configResolved({ publicDir: "/public" });
-
-    const bundle: Record<string, { source: string | Uint8Array; type: string }> = {
-      "index.html": { source: new Uint8Array([1, 2, 3]), type: "asset" },
-    };
-
-    if (typeof plugin.generateBundle === "function")
-      // @ts-expect-error minimal options mock
-      plugin.generateBundle({}, bundle);
-
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ publicDir: "/public" });
+    const bundle = { "index.html": { source: new Uint8Array([1, 2, 3]), type: "asset" } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
     expect(bundle["index.html"]?.source).toBeInstanceOf(Uint8Array);
   });
 
   it("warns and skips injection when _headers has no nonce", () => {
     mockedReadFileSync.mockReturnValueOnce("Content-Security-Policy: script-src 'self'\n");
     const plugin = cspNonce();
-    if (typeof plugin.configResolved === "function")
-      // @ts-expect-error minimal config mock
-      plugin.configResolved({ publicDir: "/public" });
-
-    const bundle: Record<string, { source: string; type: string }> = {
-      "index.html": { source: "<script src='app.js'></script>", type: "asset" },
-    };
-
-    if (typeof plugin.generateBundle === "function")
-      // @ts-expect-error minimal options mock
-      plugin.generateBundle({}, bundle);
-
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ publicDir: "/public" });
+    const bundle = { "index.html": { source: "<script src='app.js'></script>", type: "asset" } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
     expect(bundle["index.html"]?.source).not.toContain("nonce=");
   });
 
@@ -119,18 +83,11 @@ describe("cspNonce plugin", async () => {
       throw new Error("ENOENT");
     });
     const plugin = cspNonce();
-    if (typeof plugin.configResolved === "function")
-      // @ts-expect-error minimal config mock
-      plugin.configResolved({ publicDir: "/public" });
-
-    const bundle: Record<string, { source: string; type: string }> = {
-      "index.html": { source: "<script src='app.js'></script>", type: "asset" },
-    };
-
-    if (typeof plugin.generateBundle === "function")
-      // @ts-expect-error minimal options mock
-      plugin.generateBundle({}, bundle);
-
+    // @ts-expect-error minimal config mock
+    if (typeof plugin.configResolved === "function") plugin.configResolved({ publicDir: "/public" });
+    const bundle = { "index.html": { source: "<script src='app.js'></script>", type: "asset" } };
+    // @ts-expect-error minimal options mock
+    if (typeof plugin.generateBundle === "function") plugin.generateBundle({}, bundle);
     expect(bundle["index.html"]?.source).not.toContain("nonce=");
   });
 });
