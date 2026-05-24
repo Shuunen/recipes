@@ -23,7 +23,7 @@ export default defineConfig({
   plugins: [react(), md({ mode: [Mode.REACT, Mode.TOC] }), tailwindcss(), uniqueMark(), cspNonce()],
   test: {
     coverage: {
-      exclude: ["**/*.md"],
+      exclude: ["**/*.md", "src/bin/lint.rules.ts"],
       provider: "v8" as const,
     },
     environment: "happy-dom",

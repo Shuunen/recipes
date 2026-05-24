@@ -1,5 +1,5 @@
 // cSpell:disable
-import { ensureCspellFrontmatter, getSectionBody, getSectionIndexes, hasOneH1, hasRequiredSectionOrder, hasSection, ingredientsHasUnorderedList, recetteHasOrderedList, sectionHasText, toHumanTitle } from "./lint.utils";
+import { ensureCspellFrontmatter, getSectionBody, getSectionIndexes, hasOneH1, hasRequiredSectionOrder, hasSection, ingredientsHasUnorderedList, recetteHasOrderedList, sectionHasText, toHumanTitle } from "./lint.rules";
 
 const fullRecipe = `---
 cSpell:locale fr
