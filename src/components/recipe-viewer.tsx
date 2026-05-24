@@ -1,18 +1,18 @@
-import { HomeIcon, MoveLeftIcon } from "lucide-react";
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { Divider } from "./divider";
-import { BackButton } from "./ui/back-button";
-import { Button } from "./ui/button";
+import { HomeIcon, MoveLeftIcon } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { Divider } from './divider'
+import { BackButton } from './ui/back-button'
+import { Button } from './ui/button'
 
 type RecipeParams = {
-  category: string;
-  recipe: string;
-};
+  category: string
+  recipe: string
+}
 
 type RecipeModule = {
-  ReactComponent: React.ComponentType;
-};
+  ReactComponent: React.ComponentType
+}
 
 function ErrorMessage({ error }: { error?: string }) {
   return (
@@ -22,7 +22,7 @@ function ErrorMessage({ error }: { error?: string }) {
         <p className="text-gray-600">{error || "La recette demandée n'existe pas."}</p>
       </div>
     </div>
-  );
+  )
 }
 
 // oxlint-disable-next-line react/no-multi-comp
@@ -31,59 +31,59 @@ function LoadingMessage() {
     <div className="animate-fade-in-delayed flex h-full items-center justify-center" data-testid="loading">
       <div className="text-lg">Chargement de la recette...</div>
     </div>
-  );
+  )
 }
 
 /* v8 ignore next -- @preserve */
 // oxlint-disable-next-line react/no-multi-comp, max-lines-per-function
 export function RecipeViewer() {
-  const { category, recipe } = useParams<RecipeParams>();
+  const { category, recipe } = useParams<RecipeParams>()
   // oxlint-disable-next-line react/hook-use-state
-  const [RecipeComponent, setRecipeComponent] = useState<React.ComponentType | undefined>(undefined);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | undefined>(undefined);
+  const [RecipeComponent, setRecipeComponent] = useState<React.ComponentType | undefined>(undefined)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | undefined>(undefined)
 
   useEffect(() => {
-    let cancelled = false;
+    let cancelled = false
 
     if (!category || !recipe) {
-      setError("Paramètres manquants");
-      setIsLoading(false);
+      setError('Paramètres manquants')
+      setIsLoading(false)
     } else {
-      setIsLoading(true);
-      setError(undefined);
-      setRecipeComponent(undefined);
+      setIsLoading(true)
+      setError(undefined)
+      setRecipeComponent(undefined)
       /* v8 ignore start */
       import(`../recipes/${category}/${recipe}.md`)
         // oxlint-disable-next-line promise/prefer-await-to-then
         .then((module: RecipeModule) => {
           if (!cancelled) {
-            setRecipeComponent(() => module.ReactComponent);
-            setIsLoading(false);
+            setRecipeComponent(() => module.ReactComponent)
+            setIsLoading(false)
           }
-          return undefined;
+          return undefined
         })
         // oxlint-disable-next-line promise/prefer-await-to-then
         .catch(() => {
           if (!cancelled) {
-            setError(`La recette "${recipe}" dans la catégorie "${category}" n'existe pas.`);
-            setIsLoading(false);
+            setError(`La recette "${recipe}" dans la catégorie "${category}" n'existe pas.`)
+            setIsLoading(false)
           }
-        });
+        })
       /* v8 ignore stop */
     }
 
     return () => {
-      cancelled = true;
-    };
-  }, [category, recipe]);
+      cancelled = true
+    }
+  }, [category, recipe])
 
-  if (!category || !recipe || error) return <ErrorMessage error={error} />;
+  if (!category || !recipe || error) return <ErrorMessage error={error} />
 
-  if (isLoading) return <LoadingMessage />;
+  if (isLoading) return <LoadingMessage />
 
   /* v8 ignore next -- @preserve */
-  if (!RecipeComponent) return <ErrorMessage error="Composant de recette non disponible" />;
+  if (!RecipeComponent) return <ErrorMessage error="Composant de recette non disponible" />
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center" data-testid="recipe">
@@ -102,5 +102,5 @@ export function RecipeViewer() {
         </Button>
       </div>
     </div>
-  );
+  )
 }

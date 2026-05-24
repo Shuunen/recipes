@@ -8,9 +8,9 @@
   "objectWrap": "preserve",
   "printWidth": 240,
   "quoteProps": "as-needed",
-  "semi": true,
+  "semi": false,
   "singleAttributePerLine": false,
-  "singleQuote": false,
+  "singleQuote": true,
   "sortImports": {
     "ignoreCase": true,
     "newlinesBetween": false,

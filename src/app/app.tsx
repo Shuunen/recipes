@@ -1,14 +1,14 @@
-import { useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
-import { RecipeMenu } from "../components/recipe-menu";
-import { RecipeViewer } from "../components/recipe-viewer";
+import { useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import { RecipeMenu } from '../components/recipe-menu'
+import { RecipeViewer } from '../components/recipe-viewer'
 
 export function App() {
-  const location = useLocation();
+  const location = useLocation()
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.key]);
+    window.scrollTo(0, 0)
+  }, [location.key])
 
   return (
     <div className="mx-auto prose flex min-h-screen max-w-4xl flex-col md:prose-lg" data-component="app">
@@ -19,5 +19,5 @@ export function App() {
         </Routes>
       </div>
     </div>
-  );
+  )
 }
