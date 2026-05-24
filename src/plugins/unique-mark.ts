@@ -17,10 +17,10 @@ function injectMark(content: string, placeholder: string, mark: string) {
   return content
     .replaceAll(new RegExp(`__${placeholder}__`, "gu"), mark)
     .replaceAll(new RegExp(`\\{{1,2} ?${placeholder} ?\\}{1,2}`, "gu"), mark)
-    .replace(new RegExp(`(<[a-z.]+\\b[^>]*id="${placeholder}"[^>]*>)[^<]*(</[a-z.]+>)`, "u"), `$1${mark}$2`)
-    .replace(new RegExp(`(<meta\\b[^>]*name="${placeholder}"[^>]*content=")[^"]*(")`, "u"), `$1${mark}$2`)
-    .replace(new RegExp(`(<meta\\b[^>]*content=")[^"]*(" [^>]*name="${placeholder}")`, "u"), `$1${mark}$2`)
-    .replace(new RegExp(`(\\w+\\.jsx\\([^,]+,\\{[^}]*id:"${placeholder}"[^}]*)(\\})`, "u"), `$1,children:"${mark}"$2`);
+    .replace(new RegExp(`(<[a-z.]+\\b[^>]*id="${placeholder}"[^>]*>)[^<]*(</[a-z.]+>)`, "u"), (_m, g1: string, g2: string) => `${g1}${mark}${g2}`)
+    .replace(new RegExp(`(<meta\\b[^>]*name="${placeholder}"[^>]*content=")[^"]*(")`, "u"), (_m, g1: string, g2: string) => `${g1}${mark}${g2}`)
+    .replace(new RegExp(`(<meta\\b[^>]*content=")[^"]*(" [^>]*name="${placeholder}")`, "u"), (_m, g1: string, g2: string) => `${g1}${mark}${g2}`)
+    .replace(new RegExp(`(\\w+\\.jsx\\([^,]+,\\{[^}]*id:"${placeholder}"[^}]*)(\\})`, "u"), (_m, g1: string, g2: string) => `${g1},children:"${mark}"${g2}`);
 }
 
 function generateMark({ commit = "", date = new Date(), version = "" }: { commit?: string; date?: Date; version?: string }) {

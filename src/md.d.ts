@@ -5,7 +5,7 @@ declare module "*.md" {
   const raw: string;
 
   import React from "react";
-  const ReactComponent: React.VFC;
+  const ReactComponent: React.ComponentType;
 
   export { attributes, toc, html, ReactComponent };
 }

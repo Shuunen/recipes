@@ -82,7 +82,7 @@ export function RecipeMenu() {
         </h1>
         {categories.map(category => (
           <section className="w-full" key={category}>
-            <h2>{categoryMap[category]}</h2>
+            <h2>{categoryMap[category] ?? category}</h2>
             <ol className="grid pl-0! sm:grid-cols-2">
               {groupedRecipes[category]?.map((recipe, index) => (
                 <li className="flex items-center" key={`${recipe.category}/${recipe.name}`}>

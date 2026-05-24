@@ -49,6 +49,7 @@ export function RecipeViewer() {
       return;
     }
 
+    let cancelled = false;
     setIsLoading(true);
     setError(undefined);
     setRecipeComponent(undefined);
@@ -56,16 +57,23 @@ export function RecipeViewer() {
     import(`../recipes/${category}/${recipe}.md`)
       // oxlint-disable-next-line promise/prefer-await-to-then
       .then((module: RecipeModule) => {
-        setRecipeComponent(() => module.ReactComponent);
-        setIsLoading(false);
+        if (!cancelled) {
+          setRecipeComponent(() => module.ReactComponent);
+          setIsLoading(false);
+        }
         return undefined;
       })
       // oxlint-disable-next-line promise/prefer-await-to-then
       .catch(() => {
-        setError(`La recette "${recipe}" dans la catégorie "${category}" n'existe pas.`);
-        setIsLoading(false);
+        if (!cancelled) {
+          setError(`La recette "${recipe}" dans la catégorie "${category}" n'existe pas.`);
+          setIsLoading(false);
+        }
       });
     /* v8 ignore stop */
+    return () => {
+      cancelled = true;
+    };
   }, [category, recipe]);
 
   if (!category || !recipe || error) return <ErrorMessage error={error} />;
