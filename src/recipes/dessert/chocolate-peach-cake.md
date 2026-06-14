@@ -24,7 +24,7 @@ Pour 6-8 personnes :
 
 ## Retour d'expérience
 
-À tester !
+Mouais ca sent beaucoup la pêche ;'( Réduire la quantité de pêches
 
 ## Source
 
