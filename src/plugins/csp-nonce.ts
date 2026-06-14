@@ -1,15 +1,15 @@
 // oxlint-disable import/no-nodejs-modules
 import { readFileSync } from 'node:fs'
-import { join } from 'node:path'
+import path from 'node:path'
 import type { Plugin } from 'vite'
 
 function extractNonce(headersContent: string): string | undefined {
-  const match = /nonce-([A-Za-z0-9+/=_-]+)/.exec(headersContent)
-  return match?.[1]
+  const match = /nonce-(?<nonce>[A-Za-z0-9+/=_-]+)/.exec(headersContent)
+  return match?.groups?.nonce
 }
 
 function injectNonceIntoHtml(html: string, nonce: string): string {
-  return html.replaceAll(/<script\b([^>]*)>/gu, (_m, attrs: string) => {
+  return html.replaceAll(/<script\b(?<attrs>[^>]*)>/gu, (_m, attrs: string) => {
     if (/\bnonce=/.test(attrs)) return `<script${attrs}>`
     return `<script${attrs} nonce="${nonce}">`
   })
@@ -20,7 +20,7 @@ export function cspNonce(): Plugin {
   return {
     apply: 'build',
     configResolved(config) {
-      const headersPath = join(config.publicDir, '_headers')
+      const headersPath = path.join(config.publicDir, '_headers')
       try {
         const content = readFileSync(headersPath, 'utf8')
         nonce = extractNonce(content)

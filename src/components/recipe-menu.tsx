@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { Divider } from './divider'
 import { IconOwl } from './ui/icon-owl'
 
-const RECIPE_PATH_REGEX = /\.\.\/recipes\/([^/]+)\/([^/]+)\.md$/
+const RECIPE_PATH_REGEX = /\.\.\/recipes\/(?<category>[^/]+)\/(?<name>[^/]+)\.md$/
 
 const categoryMap: Record<string, string> = {
   aperitif: 'Apéritifs 🍹',
@@ -26,7 +26,7 @@ function parseRecipesFromPaths(recipeModules: Record<string, () => Promise<unkno
   for (const path of Object.keys(recipeModules)) {
     const match = RECIPE_PATH_REGEX.exec(path)
     if (!match) continue
-    const [, category, name] = match
+    const { category, name } = match.groups ?? {}
     /* v8 ignore start */
     if (name === 'template') continue
     if (category === undefined || name === undefined) continue
