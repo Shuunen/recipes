@@ -23,6 +23,10 @@
       "inputs": ["src/**/*.{ts,tsx}", "vite.config.ts"],
       "outputs": ["coverage/**"]
     },
+    "test:e2e": {
+      "inputs": ["e2e/**", "playwright.config.ts", "src/**"],
+      "outputs": ["playwright-report/**", "test-results/**"]
+    },
     "lint:recipes": {
       "inputs": ["src/recipes/**/*.md", "src/bin/lint.*.ts"]
     }

@@ -24,5 +24,15 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile && echo install dependencies ok ✅
 
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ hashFiles('pnpm-lock.yaml') }}
+
+      - name: Install Playwright
+        run: pnpm exec playwright install --with-deps chromium-headless-shell && echo playwright install ok ✅
+
       - name: Run Check
         run: pnpm run check
