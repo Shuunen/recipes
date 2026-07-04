@@ -1,8 +1,8 @@
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
-import { Mode, plugin as md } from 'vite-plugin-markdown'
 import { defineConfig } from 'vitest/config'
 import { cspNonce } from './src/plugins/csp-nonce.ts'
+import { markdown } from './src/plugins/markdown.ts'
 import { uniqueMark } from './src/plugins/unique-mark.ts'
 
 // oxlint-disable-next-line import/no-default-export
@@ -20,7 +20,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react(), md({ mode: [Mode.REACT, Mode.TOC] }), tailwindcss(), uniqueMark(), cspNonce()],
+  plugins: [react(), markdown(), tailwindcss(), uniqueMark(), cspNonce()],
   test: {
     coverage: {
       exclude: ['**/*.md', 'src/bin/lint.rules.ts'],
