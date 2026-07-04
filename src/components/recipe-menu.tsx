@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Divider } from './divider'
 import { IconOwl } from './ui/icon-owl'
@@ -46,29 +46,10 @@ function groupRecipesByCategory(recipes: Recipe[]): Record<string, Recipe[]> {
   return grouped
 }
 
-function Loading() {
-  return (
-    <nav className="flex w-full justify-center gap-6 bg-white p-4 text-2xl font-semibold shadow-md">
-      <span className="text-gray-500">Chargement des recettes...</span>
-    </nav>
-  )
-}
-
-// oxlint-disable-next-line react/no-multi-comp
 export function RecipeMenu() {
-  const [groupedRecipes, setGroupedRecipes] = useState<Record<string, Recipe[]>>({})
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    /* v8 ignore next -- @preserve */
-    const recipeModules = import.meta.glob('../recipes/**/*.md')
-    const parsedRecipes = parseRecipesFromPaths(recipeModules)
-    const grouped = groupRecipesByCategory(parsedRecipes)
-    setGroupedRecipes(grouped)
-    setIsLoading(false)
-  }, [])
-
-  if (isLoading) return <Loading />
+  /* v8 ignore next -- @preserve */
+  // oxlint-disable-next-line react/hook-use-state
+  const [groupedRecipes] = useState<Record<string, Recipe[]>>(() => groupRecipesByCategory(parseRecipesFromPaths(import.meta.glob('../recipes/**/*.md'))))
 
   const categories = Object.keys(groupedRecipes).toSorted()
 

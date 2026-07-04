@@ -36,8 +36,7 @@ function LoadingMessage() {
 
 /* v8 ignore next -- @preserve */
 // oxlint-disable-next-line react/no-multi-comp, max-lines-per-function
-export function RecipeViewer() {
-  const { category, recipe } = useParams<RecipeParams>()
+function RecipeLoader({ category, recipe }: RecipeParams) {
   // oxlint-disable-next-line react/hook-use-state
   const [RecipeComponent, setRecipeComponent] = useState<React.ComponentType | undefined>(undefined)
   const [isLoading, setIsLoading] = useState(true)
@@ -45,40 +44,31 @@ export function RecipeViewer() {
 
   useEffect(() => {
     let cancelled = false
-
-    if (!category || !recipe) {
-      setError('Paramètres manquants')
-      setIsLoading(false)
-    } else {
-      setIsLoading(true)
-      setError(undefined)
-      setRecipeComponent(undefined)
-      /* v8 ignore start */
-      import(`../recipes/${category}/${recipe}.md`)
-        // oxlint-disable-next-line promise/prefer-await-to-then
-        .then((module: RecipeModule) => {
-          if (!cancelled) {
-            setRecipeComponent(() => module.ReactComponent)
-            setIsLoading(false)
-          }
-          return undefined
-        })
-        // oxlint-disable-next-line promise/prefer-await-to-then
-        .catch(() => {
-          if (!cancelled) {
-            setError(`La recette "${recipe}" dans la catégorie "${category}" n'existe pas.`)
-            setIsLoading(false)
-          }
-        })
-      /* v8 ignore stop */
-    }
+    /* v8 ignore start */
+    import(`../recipes/${category}/${recipe}.md`)
+      // oxlint-disable-next-line promise/prefer-await-to-then
+      .then((module: RecipeModule) => {
+        if (!cancelled) {
+          setRecipeComponent(() => module.ReactComponent)
+          setIsLoading(false)
+        }
+        return undefined
+      })
+      // oxlint-disable-next-line promise/prefer-await-to-then
+      .catch(() => {
+        if (!cancelled) {
+          setError(`La recette "${recipe}" dans la catégorie "${category}" n'existe pas.`)
+          setIsLoading(false)
+        }
+      })
+    /* v8 ignore stop */
 
     return () => {
       cancelled = true
     }
   }, [category, recipe])
 
-  if (!category || !recipe || error) return <ErrorMessage error={error} />
+  if (error) return <ErrorMessage error={error} />
 
   if (isLoading) return <LoadingMessage />
 
@@ -103,4 +93,13 @@ export function RecipeViewer() {
       </div>
     </div>
   )
+}
+
+// oxlint-disable-next-line react/no-multi-comp
+export function RecipeViewer() {
+  const { category, recipe } = useParams<RecipeParams>()
+
+  if (!category || !recipe) return <ErrorMessage error="Paramètres manquants" />
+
+  return <RecipeLoader category={category} key={`${category}/${recipe}`} recipe={recipe} />
 }

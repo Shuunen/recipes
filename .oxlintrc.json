@@ -182,6 +182,7 @@
     "prefer-ternary": "off",
     "promise-function-async": "off",
     "react-in-jsx-scope": "off",
+    "react/jsx-no-literals": "off",
     "require-test-timeout": "off",
     "require-unicode-regexp": "off",
     "restrict-template-expressions": "off",
