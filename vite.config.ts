@@ -8,9 +8,6 @@ import { uniqueMark } from './src/plugins/unique-mark.ts'
 // oxlint-disable-next-line import/no-default-export
 export default defineConfig({
   build: {
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
     reportCompressedSize: false,
     rolldownOptions: {
       output: {
@@ -25,6 +22,9 @@ export default defineConfig({
     coverage: {
       exclude: ['**/*.md', 'src/bin/lint.rules.ts'],
       provider: 'v8' as const,
+      thresholds: {
+        100: true,
+      },
     },
     environment: 'happy-dom',
     globals: true,
