@@ -1,2 +1,4 @@
-onlyBuiltDependencies:
-  - bun
+allowBuilds:
+  bun: true
+overrides:
+  '@babel/parser': 7.29.8
