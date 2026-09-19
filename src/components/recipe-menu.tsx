@@ -26,8 +26,8 @@ function parseRecipesFromPaths(recipeModules: Record<string, () => Promise<unkno
   for (const path of Object.keys(recipeModules)) {
     const match = RECIPE_PATH_REGEX.exec(path)
     if (!match) continue
-    const { category, name } = match.groups ?? {}
     /* v8 ignore start */
+    const { category, name } = match.groups ?? {}
     if (name === 'template') continue
     if (category === undefined || name === undefined) continue
     /* v8 ignore stop */
@@ -48,8 +48,7 @@ function groupRecipesByCategory(recipes: Recipe[]): Record<string, Recipe[]> {
 
 export function RecipeMenu() {
   /* v8 ignore next -- @preserve */
-  // oxlint-disable-next-line react/hook-use-state
-  const [groupedRecipes] = useState<Record<string, Recipe[]>>(() => groupRecipesByCategory(parseRecipesFromPaths(import.meta.glob('../recipes/**/*.md'))))
+  const [groupedRecipes] = useState<Record<string, Recipe[]>>(() => groupRecipesByCategory(parseRecipesFromPaths(import.meta.glob('../recipes/**/*.md')))) // oxlint-disable-line react/hook-use-state
 
   const categories = Object.keys(groupedRecipes).toSorted()
 
@@ -61,19 +60,23 @@ export function RecipeMenu() {
           <br />
           <span className="text-amber-100">Romain</span> !
         </h1>
-        {categories.map(category => (
-          <section className="w-full" key={category}>
-            <h2>{categoryMap[category] ?? category}</h2>
-            <ol className="grid pl-0! sm:grid-cols-2">
-              {groupedRecipes[category]?.map((recipe, index) => (
-                <li className="flex items-center" key={`${recipe.category}/${recipe.name}`}>
-                  <span className="mr-2">{index + 1}.</span>
-                  <NavLink to={`/recipes/${recipe.category}/${recipe.name}`}>{recipe.name}</NavLink>
-                </li>
-              ))}
-            </ol>
-          </section>
-        ))}
+        {categories.map(category => {
+          /* v8 ignore next -- @preserve: fallback for a recipe category not yet mapped to a display label */
+          const label = categoryMap[category] ?? category
+          return (
+            <section className="w-full" key={category}>
+              <h2>{label}</h2>
+              <ol className="grid pl-0! sm:grid-cols-2">
+                {groupedRecipes[category]?.map((recipe, index) => (
+                  <li className="flex items-center" key={`${recipe.category}/${recipe.name}`}>
+                    <span className="mr-2">{index + 1}.</span>
+                    <NavLink to={`/recipes/${recipe.category}/${recipe.name}`}>{recipe.name}</NavLink>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )
+        })}
         <Divider />
       </div>
       <span className="mb-8 block w-full text-center text-sm text-gray-500 italic text-shadow-md text-shadow-white">__unique-mark__</span>

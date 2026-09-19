@@ -14,12 +14,12 @@ type RecipeModule = {
   ReactComponent: React.ComponentType
 }
 
-function ErrorMessage({ error }: { error?: string }) {
+function ErrorMessage({ error }: { error: string }) {
   return (
     <div className="flex h-full items-center justify-center" data-testid="error">
       <div className="text-center">
         <h2 className="text-2xl font-semibold text-gray-800">Recette non trouvée</h2>
-        <p className="text-gray-600">{error || "La recette demandée n'existe pas."}</p>
+        <p className="text-gray-600">{error}</p>
       </div>
     </div>
   )
