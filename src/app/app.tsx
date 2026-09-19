@@ -8,6 +8,7 @@ export function App() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    // oxlint-disable-next-line react/exhaustive-effect-dependencies
   }, [location.key])
 
   return (

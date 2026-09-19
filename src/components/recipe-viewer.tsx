@@ -45,6 +45,7 @@ function RecipeLoader({ category, recipe }: RecipeParams) {
   useEffect(() => {
     let cancelled = false
     /* v8 ignore start */
+    // oxlint-disable-next-line react/todo
     import(`../recipes/${category}/${recipe}.md`)
       // oxlint-disable-next-line promise/prefer-await-to-then
       .then((module: RecipeModule) => {
