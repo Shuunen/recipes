@@ -18,6 +18,7 @@ export default defineConfig({
     },
   },
   plugins: [react(), markdown(), tailwindcss(), uniqueMark(), cspNonce()],
+  server: { port: 5177, strictPort: true },
   test: {
     coverage: {
       exclude: ['**/*.md', 'src/bin/lint.rules.ts'],

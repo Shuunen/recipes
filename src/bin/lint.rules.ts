@@ -5,8 +5,8 @@ import path from 'node:path'
 const regexH1 = /^#\s+.+$/gm
 const regexUnorderedList = /^-\s+.+$/m
 const regexOrderedList = /^\d+\.\s+.+$/m
-export const requiredSections = ['Ingrédients', 'Recette', "Retour d'expérience", 'Source']
-export const regexCspell = /cSpell:locale\s+[^\s]+/
+const requiredSections = ['Ingrédients', 'Recette', "Retour d'expérience", 'Source']
+const regexCspell = /cSpell:locale\s+[^\s]+/
 
 export function getSectionIndexes(lines: string[], sectionTitle: string): { heading: number; nextHeading: number } | undefined {
   let heading = -1
@@ -107,7 +107,7 @@ export function ensureCspellFrontmatter(content: string): string {
   return `${fixedContent.replaceAll(/\n+$/g, '')}\n`
 }
 
-export function applyLineFix(content: string, updateLines: (lines: string[]) => void): string {
+function applyLineFix(content: string, updateLines: (lines: string[]) => void): string {
   const normalizedContent = content.replaceAll('\r\n', '\n')
   const lines = normalizedContent.split('\n')
   updateLines(lines)

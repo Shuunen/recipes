@@ -3,6 +3,7 @@
 <!-- markdownlint-disable MD043 -->
 
 [![GitHub license](https://img.shields.io/github/license/shuunen/recipes.svg?color=informational)](https://github.com/Shuunen/recipes/blob/master/LICENSE)
+[![Visitors](https://hits.sh/github.com/Shuunen/recipes.svg?label=visitors&color=informational)](https://hits.sh/github.com/Shuunen/recipes/)
 [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/recettes-shuunen.netlify.app.svg?publish)](https://observatory.mozilla.org/analyze/recettes-shuunen.netlify.app)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/Shuunen/recipes?style=flat)](https://codeclimate.com/github/Shuunen/recipes)
 [![Website](https://img.shields.io/website/https/recettes-shuunen.netlify.app.svg)](https://recettes-shuunen.netlify.app)
@@ -31,14 +32,19 @@ React + TypeScript + Tailwind CSS, built with Vite and Turbo.
 ## Thanks
 
 - [Boxy Svg](https://boxy-svg.com) : simple & effective svg editor
+- [Bun](https://bun.sh) : super fast runtime for JavaScript and TypeScript
 - [Github](https://github.com) : this great, free and evolving platform
 - [Gordon Johnson](https://pixabay.com/users/GDJ-1086657) : elegant divider
+- [Knip](https://github.com/webpro/knip) : super tool to find & fix problems
 - [Netlify](https://netlify.com/) : always here offering free hosting for open source projects
+- [Oxc](https://oxc.rs) : a lovely super-fast collection of JavaScript tools written in Rust
 - [oxlint](https://oxc.rs/docs/guide/usage/linter) : fast Rust-based linter replacing ESLint
 - [React](https://react.dev) : the UI library powering the frontend
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
 - [Svg Omg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [Tailwind CSS](https://tailwindcss.com) : utility-first CSS framework
+- [TailwindCss](https://tailwindcss.com) : awesome lib to produce maintainable style
+- [V8](https://github.com/demurgos/v8-coverage) : simple & effective cli for code coverage
 - [Vecteezy](https://www.vecteezy.com/free-vector/macaroni) : funky macaroni pattern background (I made it repeatable)
 - [Vite](https://vitejs.dev) : next generation frontend build tool
 - [Vitest](https://vitest.dev) : blazing fast unit test framework
