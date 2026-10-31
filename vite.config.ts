@@ -18,6 +18,8 @@ export default defineConfig({
     },
   },
   plugins: [react(), markdown(), tailwindcss(), uniqueMark(), cspNonce()],
+  // dedicated ports, so apps never collide when running together
+  preview: { port: 4107, strictPort: true },
   server: { port: 5177, strictPort: true },
   test: {
     coverage: {
