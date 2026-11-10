@@ -43,6 +43,10 @@
     "window": "readonly"
   },
   "ignorePatterns": [".git", "*.d.ts", "coverage", "dist", "node_modules", "out-tsc", "test-output"],
+  "options": {
+    "typeAware": true,
+    "typeCheck": true
+  },
   "overrides": [
     {
       "files": ["src/bin/**/*.ts"],
@@ -192,6 +196,12 @@
     "strict-void-return": "off",
     "switch-exhaustiveness-check": "off",
     "unambiguous": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
+      }
+    ],
     "unicorn/prefer-spread": "off",
     "vitest/prefer-called-times": "off",
     "vitest/prefer-to-be-falsy": "off",

@@ -16,5 +16,5 @@
     "types": ["node", "vitest/globals", "vitest/importMeta", "vitest"],
     "verbatimModuleSyntax": true
   },
-  "include": ["vite.config.ts", "src/plugins"]
+  "include": ["vite.config.ts", "playwright.config.ts", "src/plugins"]
 }

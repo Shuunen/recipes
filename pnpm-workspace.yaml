@@ -1,5 +1,7 @@
 allowBuilds:
   bun: true
+minimumReleaseAgeExclude:
+  - knip@6.45.0
 overrides:
   '@babel/parser': 8.0.10
   # @tailwindcss/typography pins 6.0.10 which has a known CPU exhaustion issue, remove when it ships 6.1.5 or later

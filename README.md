@@ -40,6 +40,7 @@ React + TypeScript + Tailwind CSS, built with Vite and Turbo.
 - [Oxc](https://oxc.rs) : a lovely super-fast collection of JavaScript tools written in Rust
 - [oxlint](https://oxc.rs/docs/guide/usage/linter) : fast Rust-based linter replacing ESLint
 - [React](https://react.dev) : the UI library powering the frontend
+- [Repo-checker](https://github.com/Shuunen/repo-checker) : eslint cover /src code and this tool the rest ^^
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
 - [Svg Omg](https://jakearchibald.github.io/svgomg/) : the great king of svg file size reduction
 - [Tailwind CSS](https://tailwindcss.com) : utility-first CSS framework
