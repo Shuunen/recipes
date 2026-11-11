@@ -5,7 +5,7 @@
       "dependsOn": ["lint:install"]
     },
     "build:vite": {
-      "dependsOn": ["build:tsc"],
+      "dependsOn": ["build:tsc", "lint:install"],
       "outputs": ["dist/**"]
     },
     "lint:format": {
@@ -24,7 +24,7 @@
       "dependsOn": ["lint:install"]
     },
     "lint:repo": {
-      "dependsOn": ["build:vite"],
+      "dependsOn": ["build:vite", "lint:install", "build:tsc"],
       "inputs": ["$TURBO_DEFAULT$", "dist/**"]
     },
     "lint:types": {

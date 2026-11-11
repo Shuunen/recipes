@@ -59,7 +59,7 @@
     "build:vite": "vite build && echo build:vite completed successfully || (echo Please fix build errors and run pnpm run build:vite to check for remaining build issues && exit 1)",
     "check": "turbo run --output-logs=errors-only lint:install lint:types lint:format lint:issues lint:knip lint:recipes build:tsc build:vite test:unit test:e2e lint:repo && echo check completed successfully",
     "dev": "vite",
-    "lint": "turbo run lint:install lint:types lint:format lint:issues lint:knip lint:repo && echo lint completed successfully",
+    "lint": "turbo run lint:install lint:types lint:format lint:issues lint:knip lint:repo lint:recipes && echo lint completed successfully",
     "lint:format": "oxfmt --check && echo lint:format completed successfully || (echo Please run pnpm run lint:format:fix to automatically fix formatting issues && exit 1)",
     "lint:format:fix": "oxfmt --write && echo lint:format:fix completed successfully || (echo Please run pnpm run lint:format to check for remaining formatting issues && exit 1)",
     "lint:install": "pnpm install && echo lint:install completed successfully",
