@@ -1,12 +1,8 @@
 {
-  "[markdown]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode"
-  },
   "cSpell.words": ["autoplan", "gstack", "recettes", "Romain"],
-  "editor.defaultFormatter": "oxc.oxc-vscode",
-  "editor.formatOnSave": true,
-  "js/ts.experimental.useTsgo": true,
-  "oxc.fixKind": "all",
-  "oxc.typeAware": true,
-  "oxc.unusedDisableDirectives": "deny"
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#152b0a",
+    "titleBar.activeBackground": "#104014",
+    "titleBar.activeForeground": "#FDF7FB"
+  }
 }

@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Changed
+
+- Add a VS Code colour scheme to tell this project window apart
+
 ## [2.0.0] - 2026-05-24
 
 Complete rewrite from vanilla JS to React + TypeScript + Tailwind CSS. You can now browse recipes by category, view them with proper Markdown rendering, and run `pnpm lint` to validate recipe structure automatically.
