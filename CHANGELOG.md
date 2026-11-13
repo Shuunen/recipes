@@ -7,6 +7,7 @@
 - Add a VS Code colour scheme to tell this project window apart
 - Add a `VERSION` file
 - Drop the redundant `run_install` option from the CI
+- Send a `Referrer-Policy` header
 
 ## [2.0.0] - 2026-05-24
 
