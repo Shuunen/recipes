@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [2.0.1] - 2026-11-13
+
 ### Changed
 
 - Add a VS Code colour scheme to tell this project window apart
