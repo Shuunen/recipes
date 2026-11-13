@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Serve a `robots.txt` that lets crawlers index the site
+
 ## [2.0.1] - 2026-11-13
 
 ### Changed
