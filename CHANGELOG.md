@@ -6,6 +6,7 @@
 
 - Add a VS Code colour scheme to tell this project window apart
 - Add a `VERSION` file
+- Drop the redundant `run_install` option from the CI
 
 ## [2.0.0] - 2026-05-24
 
