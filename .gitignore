@@ -1,7 +1,6 @@
 .claude/
 .fallow/
 .fallow-baselines/
-.github/
 .gstack/
 .turbo/
 coverage

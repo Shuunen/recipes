@@ -8,6 +8,7 @@
 - Add a `VERSION` file
 - Drop the redundant `run_install` option from the CI
 - Send a `Referrer-Policy` header
+- Stop ignoring the `.github` folder in git
 
 ## [2.0.0] - 2026-05-24
 
