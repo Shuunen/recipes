@@ -7,6 +7,10 @@
 - Serve a `robots.txt` that lets crawlers index the site
 - Add a description and a theme color to the page
 
+### Changed
+
+- Move the dev port to 5107 to follow the port scheme
+
 ## [2.0.1] - 2026-11-13
 
 ### Changed
