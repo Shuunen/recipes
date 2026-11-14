@@ -5,6 +5,7 @@
 ### Added
 
 - Serve a `robots.txt` that lets crawlers index the site
+- Add a description and a theme color to the page
 
 ## [2.0.1] - 2026-11-13
 
