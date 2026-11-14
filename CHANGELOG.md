@@ -10,6 +10,7 @@
 ### Changed
 
 - Move the dev port to 5107 to follow the port scheme
+- Align the web manifest colors and the VS Code window colors on the theme color
 
 ## [2.0.1] - 2026-11-13
 

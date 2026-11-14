@@ -1,8 +1,17 @@
 {
   "cSpell.words": ["autoplan", "gstack", "recettes", "Romain"],
   "workbench.colorCustomizations": {
-    "activityBar.background": "#152b0a",
-    "titleBar.activeBackground": "#104014",
-    "titleBar.activeForeground": "#FDF7FB"
+    "activityBar.background": "#b78206",
+    "activityBar.foreground": "#111827",
+    "activityBarBadge.background": "#f7b318",
+    "activityBarBadge.foreground": "#111827",
+    "statusBar.background": "#b78206",
+    "statusBar.foreground": "#111827cc",
+    "statusBar.inactiveBackground": "#775504",
+    "tab.activeBorderTop": "#f7b318",
+    "titleBar.activeBackground": "#f7b318",
+    "titleBar.activeForeground": "#111827",
+    "titleBar.inactiveBackground": "#b78206",
+    "titleBar.inactiveForeground": "#111827aa"
   }
 }
