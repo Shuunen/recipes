@@ -1,17 +1,17 @@
 {
   "cSpell.words": ["autoplan", "gstack", "recettes", "Romain"],
   "workbench.colorCustomizations": {
-    "activityBar.background": "#b78206",
-    "activityBar.foreground": "#111827",
-    "activityBarBadge.background": "#f7b318",
+    "activityBar.background": "#86371c",
+    "activityBar.foreground": "#f9fafb",
+    "activityBarBadge.background": "#ca522a",
     "activityBarBadge.foreground": "#111827",
-    "statusBar.background": "#b78206",
-    "statusBar.foreground": "#111827cc",
-    "statusBar.inactiveBackground": "#775504",
-    "tab.activeBorderTop": "#f7b318",
-    "titleBar.activeBackground": "#f7b318",
+    "statusBar.background": "#86371c",
+    "statusBar.foreground": "#f9fafbcc",
+    "statusBar.inactiveBackground": "#572412",
+    "tab.activeBorderTop": "#ca522a",
+    "titleBar.activeBackground": "#ca522a",
     "titleBar.activeForeground": "#111827",
-    "titleBar.inactiveBackground": "#b78206",
-    "titleBar.inactiveForeground": "#111827aa"
+    "titleBar.inactiveBackground": "#86371c",
+    "titleBar.inactiveForeground": "#f9fafbaa"
   }
 }

@@ -12,10 +12,11 @@
 - Generate the app icons from a new square logo with `build:assets`
 - Move the dev port to 5107 to follow the port scheme
 - Align the web manifest colors and the VS Code window colors on the theme color
+- Change the theme color to `#ca522a`, in the page, the web app manifest and the editor colors
 
 ## [2.0.1] - 2026-11-13
 
-### Changed
+### Changed in 2.0.1
 
 - Add a VS Code colour scheme to tell this project window apart
 - Add a `VERSION` file
@@ -28,7 +29,7 @@
 
 Complete rewrite from vanilla JS to React + TypeScript + Tailwind CSS. You can now browse recipes by category, view them with proper Markdown rendering, and run `pnpm lint` to validate recipe structure automatically.
 
-### Added
+### Added in 2.0.0
 
 - React + TypeScript + Tailwind CSS frontend — replaces the old vanilla build; recipes render as components with proper Markdown support
 - Vite + Turbo build system with hot module replacement — `pnpm dev` starts instantly, changes reflect without a full reload
@@ -40,13 +41,13 @@ Complete rewrite from vanilla JS to React + TypeScript + Tailwind CSS. You can n
 - oxlint + oxfmt for linting and formatting — faster than ESLint, zero config
 - GitHub Actions CI updated to Node 24 with pnpm cache
 
-### Changed
+### Changed in 2.0.0
 
 - Recipe directories renamed from plural to singular (`aperitifs → aperitif`, `desserts → dessert`, `plats → plat`, `pains → pain`, `boissons → boisson`, `fromages → fromage`) — simpler paths, consistent with French grammar
 - Several recipes updated with corrected content and additional entries
 - Project structure migrated to monorepo-ready Turbo workspace layout
 
-### Removed
+### Removed in 2.0.0
 
 - Old vanilla build system (`bin/build.js`, `tailwind.config.js`, `src/layout.html`) — replaced by Vite
 - Custom ESLint config replaced by oxlint
