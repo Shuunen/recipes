@@ -8,7 +8,7 @@
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/Shuunen/recipes?style=flat)](https://codeclimate.com/github/Shuunen/recipes)
 [![Website](https://img.shields.io/website/https/recettes-shuunen.netlify.app.svg)](https://recettes-shuunen.netlify.app)
 
-![logo](docs/logo.svg)
+![logo](docs/banner.svg)
 
 > My personal [ french ] recipes
 
