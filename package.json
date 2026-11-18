@@ -11,7 +11,8 @@
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-router-dom": "^7.18.5",
-    "tailwind-merge": "^3.7.0"
+    "tailwind-merge": "^3.7.0",
+    "workbox-window": "^7.4.1"
   },
   "description": "Personal recipes collection (in french)",
   "devDependencies": {
@@ -38,6 +39,7 @@
     "turbo": "^2.11.10",
     "typescript": "~7.0.2",
     "vite": "^8.3.5",
+    "vite-plugin-pwa": "^2.0.0",
     "vitest": "^5.0.5"
   },
   "homepage": "https://github.com/Shuunen/recipes",

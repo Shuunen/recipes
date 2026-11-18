@@ -1,5 +1,6 @@
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vitest/config'
 import { cspNonce } from './src/plugins/csp-nonce.ts'
 import { markdown } from './src/plugins/markdown.ts'
@@ -17,7 +18,20 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react(), markdown(), tailwindcss(), uniqueMark(), cspNonce()],
+  plugins: [
+    react(),
+    markdown(),
+    tailwindcss(),
+    uniqueMark(),
+    cspNonce(),
+    // oxlint-disable-next-line new-cap
+    VitePWA({
+      // the manifest is public/manifest.webmanifest, linked from index.html
+      manifest: false,
+      registerType: 'autoUpdate',
+      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'] },
+    }),
+  ],
   // dedicated ports, so apps never collide when running together
   preview: { port: 4107, strictPort: true },
   server: { port: 5107, strictPort: true },

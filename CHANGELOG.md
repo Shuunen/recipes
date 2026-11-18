@@ -6,6 +6,7 @@
 
 - Serve a `robots.txt` that lets crawlers index the site
 - Add a description and a theme color to the page
+- Cache the app for offline use with a service worker that updates itself
 
 ### Changed
 
@@ -13,6 +14,7 @@
 - Move the dev port to 5107 to follow the port scheme
 - Align the web manifest colors and the VS Code window colors on the theme color
 - Change the theme color to `#ca522a`, in the page, the web app manifest and the editor colors
+- Keep a single web app manifest, the PWA plugin no longer generates a second one
 
 ## [2.0.1] - 2026-11-13
 
