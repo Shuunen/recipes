@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect x="8" y="8" width="496" height="496" rx="120" style="fill: rgb(202, 82, 42);"/>
+  <g transform="translate(256 258) matrix(0.753996, 0.632677, -0.744858, 0.887687, -181.00415, 192.076828) translate(-256 -258)" fill="#fce9c0">
+    <rect x="198" y="40" width="18" height="120" rx="9"/>
+    <rect x="247" y="40" width="18" height="120" rx="9"/>
+    <rect x="296" y="40" width="18" height="120" rx="9"/>
+    <path d="M198 146h116v26a58 58 0 0 1-58 58 58 58 0 0 1-58-58Z"/>
+    <rect x="237.407" y="160.687" width="36" height="296.322" rx="18" style=""/>
+  </g>
+  <g transform="translate(-36.6012 0) matrix(0.692253, -0.854861, 0.854861, 0.692253, 298.601563, 236.113602) translate(36.6012 -0)">
+    <path d="M15.6 88.6A90 90 0 1 1 15.6 -88.6" fill="none" stroke="#b78206" stroke-width="88"/>
+    <path d="M15.6 88.6A90 90 0 1 1 15.6 -88.6" fill="none" stroke="#ffcf41" stroke-width="76"/>
+    <path d="M11.9 67.7A68.72 68.72 0 1 1 11.9 -67.7" fill="none" stroke="#b78206" stroke-width="4" opacity=".5"/>
+    <path d="M15.6 88.6A90 90 0 1 1 15.6 -88.6" fill="none" stroke="#b78206" stroke-width="4" opacity=".5"/>
+    <path d="M19.3 109.6A111.28 111.28 0 1 1 19.3 -109.6" fill="none" stroke="#b78206" stroke-width="4" opacity=".5"/>
+    <path d="M11.1 63.2A64.16 64.16 0 1 1 11.1 -63.2" fill="none" stroke="#fce9c0" stroke-width="7" opacity=".6" stroke-linecap="round"/>
+    <g transform="rotate(80.0 0 0) translate(90 0)">
+      <ellipse rx="44.0" ry="15" fill="#b78206" style=""/>
+      <ellipse rx="30.0" ry="9" fill="#9a3412" style=""/>
+    </g>
+    <g transform="rotate(280.0 0 0) translate(90 0)">
+      <ellipse rx="44.0" ry="15" fill="#b78206"/>
+      <ellipse rx="30.0" ry="9" fill="#9a3412"/>
+    </g>
+  </g>
+</svg>

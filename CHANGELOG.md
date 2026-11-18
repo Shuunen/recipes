@@ -9,6 +9,7 @@
 
 ### Changed
 
+- Generate the app icons from a new square logo with `build:assets`
 - Move the dev port to 5107 to follow the port scheme
 - Align the web manifest colors and the VS Code window colors on the theme color
 
